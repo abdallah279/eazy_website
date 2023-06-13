@@ -13,6 +13,7 @@ window.addEventListener('scroll', function(){
 
 // Active Link
 $(".page-navbar .links .link").each(function () {
+  $(this).removeClass('active')
   if (window.location.href.includes($(this).attr("href"))) {
     $(this).addClass("active");
   }
