@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ايزي</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="./assets/plugins/fontawesome-free-6.2.0-web/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css"> -->
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
+    <!-- FlatPicker -->
+    <link rel="stylesheet" href="./assets/plugins/FlatPicker/flatpickr.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    <!-- start to loader -->
+    <div class="loader-container">
+        <div id="loader">
+            <div id="logo">
+                <img src="./assets/imgs/logo.png" alt="">
+            </div>
+            <div id="progressbar"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- Start Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="header-content">
+
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/imgs/icons/lang_ic.png" class="drop-ic" alt="">
+                        <span class="lang drop-text">العربية</span>
+                        <img src="./assets/imgs/icons/arrow_ic.png" alt="" class="drop-ic2">
+                    </button>
+
+                    <!-- DropDown -->
+                    <ul class="dropdown-menu drop-lang">
+                        <li>
+                            <a href="#" class="lang-item">العربية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="lang-item">English</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="left buttons">
+
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-toggle flag-item" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/imgs/country_flag/eg_flag.png" alt="" class="drop-flag">
+                            <span class="drop-text">مصر</span>
+                            <img src="./assets/imgs/icons/arrow_ic.png" alt="" class="drop-ic2">
+                        </button>
+    
+                        <ul class="dropdown-menu drop-lang left lg">
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/sa_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">السعودية</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/eg_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">مصر</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/em_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">الامارات </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/kw_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">الكويت</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="login.html" class="dropdown-toggle">
+                        <i class="fa-regular fa-user drop-ic"></i>
+                        <span class="drop-text">تسجيل دخول</span>
+                    </a>
+
+                    <!-- <div class="dropdown">
+                        <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user drop-ic"></i>
+                            <span class="drop-text">عبدالله زكريا</span>
+                            <img src="./assets/imgs/icons/arrow_ic.png" alt="" class="drop-ic2">
+                        </button>
+    
+                        <ul class="dropdown-menu drop-lang left">
+                            <li>
+                                <a href="#" class="lang-item">العربية</a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item">English</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                    
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Start Navbar -->
+    <nav class="page-navbar">
+        <div class="container">
+            <div class="navbar-content">
+
+                <a href="index.html" class="logo">
+                    <img src="./assets/imgs/logo.png" alt="" class="logo-img">
+                </a>
+
+                <div class="links">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/imgs/logo.png" alt="logo">
+                    </a>
+                    <a href="index.html" class="link">الرئيسية</a>
+                    <a href="categories.html" class="link">الاقسام</a>
+                    <a href="offers.html" class="link">العروض</a>
+                    <a href="packages.html" class="link">الباقات</a>
+                    <a href="about-us.html" class="link">من نحن</a>
+                </div>
+
+                <div class="nav-icons">
+                    
+                    <a href="cart.html" class="nav-ic">
+                        <img src="./assets/imgs/icons/cart_ic.png" alt="" class="ic">
+                    </a>
+
+                    <a href="notifications.html" class="nav-ic bell">
+                        <img src="./assets/imgs/icons/bell_ic.png" alt="" class="ic">
+                    </a>
+
+                    <div class="nav-ic side-open">
+                        <i class="fa-solid fa-bars ic"></i>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Start Home Section -->
+    <section class="home-sec">
+        <img src="./assets/imgs/home_bg.png" alt="" class="home-img">
+    </section>
+    <!-- End Home Section -->
+
+
+    <!-- Start categories Section -->
+    <section class="categories-sec main-padding">
+        <div class="container">
+
+            <div class="categories-carousel owl-carousel">
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic1.png" alt="">
+                    </div>
+                    <span class="catego-name">قاعات الأفراح</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic2.png" alt="">
+                    </div>
+                    <span class="catego-name">استوديو تصوير</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic3.png" alt="">
+                    </div>
+                    <span class="catego-name">بيوتي سنتر</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic1.png" alt="">
+                    </div>
+                    <span class="catego-name">قاعات الأفراح</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic2.png" alt="">
+                    </div>
+                    <span class="catego-name">استوديو تصوير</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic3.png" alt="">
+                    </div>
+                    <span class="catego-name">بيوتي سنتر</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic1.png" alt="">
+                    </div>
+                    <span class="catego-name">قاعات الأفراح</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic2.png" alt="">
+                    </div>
+                    <span class="catego-name">استوديو تصوير</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic3.png" alt="">
+                    </div>
+                    <span class="catego-name">بيوتي سنتر</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic1.png" alt="">
+                    </div>
+                    <span class="catego-name">قاعات الأفراح</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic2.png" alt="">
+                    </div>
+                    <span class="catego-name">استوديو تصوير</span>
+                </a>
+
+                <a href="categories.html" class="categories-item">
+                    <div class="catego-con">
+                        <img class="catego-img" src="assets/imgs/cat_ic3.png" alt="">
+                    </div>
+                    <span class="catego-name">بيوتي سنتر</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End categories Section -->
+
+
+    <!-- Start Halls Section -->
+    <section class="halls-sec sec-padding">
+        <div class="container">
+
+            <div class="section-head mb-4">
+                <h2 class="section-title">قاعات الافراح</h2>
+                <a href="categories.html" class="main-link">المزيد</a>
+            </div>
+
+            <div class="cards-container grid-5">
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img1.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">قاعة كونكورد</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img2.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">قاعة كونكورد</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img3.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">قاعة كونكورد</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img5.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">قاعة كونكورد</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img4.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">قاعة كونكورد</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- End Halls Section -->
+
+
+    <!-- Start Banner Section -->
+    <section class="banner-sec sec-padding">
+        <div class="container">
+
+            <a href="#" class="banner">
+                <img src="./assets/imgs/baner_1.png" alt="" class="banner-img">
+            </a>
+
+        </div>
+    </section>
+    <!-- End Banner Section -->
+
+
+    <!-- Start Halls Section -->
+    <section class="halls-sec sec-padding mb-4">
+        <div class="container">
+
+            <div class="section-head mb-4">
+                <h2 class="section-title">بيوتي سنتر</h2>
+                <a href="categories.html" class="main-link">المزيد</a>
+            </div>
+
+            <div class="cards-container material-cards grid-4">
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img6.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">بيوتي سنتر</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img6.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">بيوتي سنتر</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img6.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">بيوتي سنتر</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="hall-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img6.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">بيوتي سنتر</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- End Halls Section -->
+    
+
+    <!-- Start Halls Section -->
+    <section class="halls-sec sec-padding">
+        <div class="container">
+
+            <div class="section-head mb-4">
+                <h2 class="section-title">أدوات منزلية</h2>
+                <a href="categories.html" class="main-link">المزيد</a>
+            </div>
+
+            <div class="cards-container material-cards grid-4">
+                
+                <a href="product-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img7.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">الريان للأجهزة الكهربائية</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="product-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img8.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">الأمل ستور</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="product-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img7.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">الريان للأجهزة الكهربائية</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+                <a href="product-detailes.html" class="main-card">
+                    <div class="img">
+                        <img src="./assets/imgs/card_img8.png" alt="" class="card-img">
+                    </div>
+
+                    <div class="card-content">
+                        <h3 class="card-name">الأمل ستور</h3>
+
+                        <div class="items">
+                            <div class="main-item">
+                                <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                                <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- End Halls Section -->
+
+
+    <!-- Start Banner Section -->
+    <section class="banner-sec sec-padding">
+        <div class="container">
+
+            <a href="#" class="banner">
+                <img src="./assets/imgs/baner_2.png" alt="" class="banner-img">
+            </a>
+
+        </div>
+    </section>
+    <!-- End Banner Section -->
+
+
+    <!-- Start Last Products -->
+    <section class="last-products sec-padding">
+        <div class="container">
+            <h2 class="section-title mb-4">أخر المنتجات المضافة</h2>
+
+            <div class="cards-container products-carousel owl-carousel">
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img1.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">سامسونج 1400rpm 9kg Washing Machine with Digital Steam Inverter 9</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img2.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">مروحة بوكس قمر مقاس 14 بوصة 500004499 ألوان متعددة</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img1.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">سامسونج 1400rpm 9kg Washing Machine with Digital Steam Inverter 9</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img2.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">مروحة بوكس قمر مقاس 14 بوصة 500004499 ألوان متعددة</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img1.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">سامسونج 1400rpm 9kg Washing Machine with Digital Steam Inverter 9</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img2.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">مروحة بوكس قمر مقاس 14 بوصة 500004499 ألوان متعددة</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img1.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">سامسونج 1400rpm 9kg Washing Machine with Digital Steam Inverter 9</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+
+                <a href="product-detailes.html" class="product-card">
+                    <div class="img">
+                        <img src="./assets/imgs/product_img2.png" alt="" class="product-img">
+                    </div>
+
+                    <div class="content">
+                        <div class="product-name">مروحة بوكس قمر مقاس 14 بوصة 500004499 ألوان متعددة</div>
+                        <div class="price"> 26540 جنيه</div>
+                    </div>
+                </a>
+                
+
+            </div>
+        </div>
+    </section>
+    <!-- End Last Products -->
+
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row footer-cards gy-4">
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="foot-content">
+                        <a href="index.html">
+                            <img src="assets/imgs/logo.png" alt="" class="foot-logo">
+                        </a>
+
+                        <p class="footer-info">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى
+                            ، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6">
+                    <div class="foot-content">
+                        <h3 class="footer-head">روابط سريعة</h3>
+                        <ul class="footer-links">
+
+                            <li class="foot-link">
+                                <a href="packages.html" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span> الباقات</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="about-us.html" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span>عن ايزي</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span>سياسة الخصوصية</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="#" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span>انضم الينا</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="foot-content">
+                        <h3 class="footer-head">تواصل معنا</h3>
+
+                        <ul class="footer-links">
+                            <li class="foot-link">
+                                <a href="tel:01028527723" class="link">
+                                    <img src="./assets/imgs/icons/phone_ic.png" alt="" class="ic">
+                                    <span> 01234456678</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="mailto:abdallahzeko8@gmail.com" class="link">
+                                    <img src="./assets/imgs/icons/email_ic.png" alt="" class="ic">
+                                    <span>info@easy.com</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <div class="link">
+                                    <img src="./assets/imgs/icons/map_ic.png" alt="" class="ic">
+                                    <span>ش مجمع المحاكم - المنصورة</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="foot-social">
+                            <a href="#" class="social-icon">
+                                <img src="assets/imgs/icons/linkedIn_ic.png" alt="" class="social-ic">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="assets/imgs/icons/twitter_ic.png" alt="" class="social-ic">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="assets/imgs/icons/facebook_ic.png" alt="" class="social-ic">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Start CopyRight -->
+    <div class="copy-right">
+        <div class="container">
+            <div class="copy-content">
+                
+                <div class="text">جميع الحقوق محفوظة لموقع ايزي</div>
+                <div class="text">تصميم وبرمجة <a href="https://aait.sa/" target="_blank" class="link">أوامر الشبكة</a></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End CopyRight -->
+
+
+    <div class="overlay-m"></div>
+
+
+
+    <!-- Bootstrap 5 -->
+    <script src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="./assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="./assets/plugins/OwlCarousel2-2.3.4/dist_2/owl.carousel.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- FlatPicker -->
+    <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
+
+    <!-- categories Slider -->
+    <script>
+        $(document).ready(function(){
+            let isRtl2 = $('html[lang="ar"]').length > 0;
+            $(".categories-carousel").owlCarousel({
+                items:2,
+                loop: false,
+                rtl: isRtl2 ? "rtl" : "ltr",
+                dots: false,
+                autoplay: true,
+                margin: 25,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
+                smartSpeed: 1500,
+                autoWidth: true,
+                rewind: true,
+            });
+        });
+    </script>
+
+    <!-- products Slider -->
+    <script>
+        $(document).ready(function(){
+            let isRtl3 = $('html[lang="ar"]').length > 0;
+            $(".products-carousel").owlCarousel({
+                items:1,
+                loop: false,
+                rtl: isRtl3 ? "rtl" : "ltr",
+                dots: true,
+                // autoplay: true,
+                margin: 15,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
+                smartSpeed: 1500,
+                // autoWidth: true,
+                rewind: true,
+
+                responsive :{
+                    1200: {
+                        items: 5
+                    },
+                    991: {
+                        items: 4
+                    },
+                    767:{
+                        items: 3
+                    },
+                    400:{
+                        items: 2
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Main Js -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+@import "sass/variables", "sass/mixins", "sass/global" , "sass/components", "sass/navbar", "sass/footer";
+
+// Home Section
+.home-sec{
+    height: 555px;
+
+    .home-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// categories
+.categories-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    .catego-con{
+        @include circle(110px);
+        @include center;
+        background-color: $white;
+        border: 1px solid $border-color;
+
+        .catego-img{
+            max-width: 55px;
+            max-height: 55px;
+        }
+    }
+
+    .catego-name{
+        font-size: 15px;
+        color: $black;
+    }
+}
+
+
+// halls-sec
+.halls-sec{
+    background-color: $white;
+}
+
+// Cards
+.cards-container{
+
+    .main-card{
+        box-shadow: $main-shadow;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: $main-transition;
+        display: block;
+        
+        .img{
+            overflow: hidden;
+            height: 180px;
+    
+            @media screen and (max-width:$screen-sm) {
+                height: 150px;
+            }
+    
+            @media screen and (max-width:$screen-xs) {
+                height: 140px;
+            }
+    
+            @media screen and (max-width:$screen-xxs) {
+                height: 130px;
+            }
+    
+            .card-img{
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                object-fit: cover;
+                transition: $main-transition;
+            }
+        }
+        
+        .card-content{
+            position: relative;
+            padding: 15px 12px;
+            
+            .card-name{
+                color: $black;
+                font-size: 16px;
+                margin-bottom: 14px;
+                font-family: fontDemi;
+    
+                @media screen and (max-width:$screen-xs) {
+                    font-size: 16px;
+                    margin-bottom: 12px;
+                }
+            }
+    
+        }
+    
+        &:hover{
+            .card-img{
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    &.material-cards{
+
+        .main-card{
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width:$screen-md) {
+                display: block;
+            }
+            
+            .img{
+                width: 80px;
+                height: 100%;
+                min-height: 100px;
+                flex-grow: 1;
+                flex-shrink: 0;
+
+                @media screen and (max-width:$screen-sm) {
+                    height: 150px;
+                    width: 100%;
+                }
+        
+                @media screen and (max-width:$screen-xs) {
+                    height: 140px;
+                }
+        
+                @media screen and (max-width:$screen-xxs) {
+                    height: 130px;
+                }
+                
+                .card-img{
+                    border-radius: 0;
+                }
+
+                &.sm{
+                    height: 180px;
+                }
+            }
+            
+            .card-content{
+                flex-grow: 1;
+                padding: 10px 12px;
+
+                .main-item{
+                    .item-text{
+                        white-space: wrap;
+                        overflow: unset;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+
+            &:hover{
+                transform: translateY(-7px);
+                .card-img{
+                    transform: unset
+                }
+            }
+        }
+    }
+
+    .product-card{
+        display: block;
+        padding: 15px 15px;
+        border-radius: 5px;
+        background-color: $white;
+        box-shadow: 0 2px 2px 0px rgba($color: #000000, $alpha: 5%);
+
+        .img{
+            height: 180px;
+
+            .product-img{
+                display: block;
+                max-width: 130px;
+                max-height: 180px;
+                margin: 0 auto;
+            }
+        }
+
+        .content{
+            margin-top: 15px;
+
+            .product-name{
+                font-size: 15px;
+                line-height: 1.5;
+                color: $black;
+                margin-bottom: 14px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            .price{
+                font-size: 17px;
+            }
+        }
+    }
+
+}
+
+
+// Banner Section
+.banner-img{
+    width: 100%;
+    height: 238px;
+    
+    @media screen and (max-width:$screen-md) {
+        object-fit: contain;
+        height: 100px;
+    }
+}
