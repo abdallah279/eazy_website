@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ايزي</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="./assets/plugins/fontawesome-free-6.2.0-web/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css"> -->
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
+    <!-- FlatPicker -->
+    <link rel="stylesheet" href="./assets/plugins/FlatPicker/flatpickr.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    <!-- start to loader -->
+    <div class="loader-container">
+        <div id="loader">
+            <div id="logo">
+                <img src="./assets/imgs/logo.png" alt="">
+            </div>
+            <div id="progressbar"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- Start Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="header-content">
+
+                <div class="dropdown">
+                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/imgs/icons/lang_ic.png" class="drop-ic" alt="">
+                        <span class="lang drop-text">العربية</span>
+                        <img src="./assets/imgs/icons/arrow_ic.png" alt="" class="drop-ic2">
+                    </button>
+
+                    <!-- DropDown -->
+                    <ul class="dropdown-menu drop-lang">
+                        <li>
+                            <a href="#" class="lang-item">العربية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="lang-item">English</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="left buttons">
+
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-toggle flag-item" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./assets/imgs/country_flag/eg_flag.png" alt="" class="drop-flag">
+                            <span class="drop-text">مصر</span>
+                            <img src="./assets/imgs/icons/arrow_ic.png" alt="" class="drop-ic2">
+                        </button>
+    
+                        <ul class="dropdown-menu drop-lang left lg">
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/sa_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">السعودية</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/eg_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">مصر</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/em_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">الامارات </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="lang-item flag-item">
+                                    <img src="./assets/imgs/country_flag/kw_flag.png" alt="" class="drop-flag">
+                                    <span class="flag-text">الكويت</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user drop-ic"></i>
+                            <span class="drop-text">عبدالله زكريا</span>
+                            <img src="./assets/imgs/icons/arrow_ic.png" alt="" class="drop-ic2">
+                        </button>
+    
+                        <ul class="dropdown-menu drop-lang left xl">
+
+                            <li>
+                                <a href="profile.html" class="lang-item flag-item">
+                                    <div class="profile-ic">
+                                        <img src="./assets/imgs/icons/user.png" alt="" class="ic">
+                                    </div>
+                                    <span class="flag-text">الملف الشخصي</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="favorite.html" class="lang-item flag-item">
+                                    <div class="profile-ic">
+                                        <img src="./assets/imgs/icons/magic-star.png" alt="" class="ic">
+                                    </div>
+                                    <span class="flag-text">المفضلة</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="bookings.html" class="lang-item flag-item">
+                                    <div class="profile-ic">
+                                        <img src="./assets/imgs/icons/receipt.png" alt="" class="ic">
+                                    </div>
+                                    <span class="flag-text">الحجوزات</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="orders.html" class="lang-item flag-item">
+                                    <div class="profile-ic">
+                                        <img src="./assets/imgs/icons/receipt.png" alt="" class="ic">
+                                    </div>
+                                    <span class="flag-text">الطلبات</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="messages.html" class="lang-item flag-item">
+                                    <div class="profile-ic">
+                                        <img src="./assets/imgs/icons/message-text.png" alt="" class="ic">
+                                    </div>
+                                    <span class="flag-text">الرسائل</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="login.html" class="lang-item flag-item">
+                                    <div class="profile-ic red">
+                                        <img src="./assets/imgs/icons/noun_logout.png" alt="" class="ic">
+                                    </div>
+                                    <span class="flag-text">تسجيل خروج</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Start Navbar -->
+    <nav class="page-navbar">
+        <div class="container">
+            <div class="navbar-content">
+
+                <a href="index.html" class="logo">
+                    <img src="./assets/imgs/logo.png" alt="" class="logo-img">
+                </a>
+
+                <div class="links">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/imgs/logo.png" alt="logo">
+                    </a>
+                    <a href="index.html" class="link active">الرئيسية</a>
+                    <a href="categories.html" class="link">الاقسام</a>
+                    <a href="offers.html" class="link">العروض</a>
+                    <a href="packages.html" class="link">الباقات</a>
+                    <a href="about-us.html" class="link">من نحن</a>
+                </div>
+
+                <div class="nav-icons">
+                    
+                    <a href="cart.html" class="nav-ic">
+                        <img src="./assets/imgs/icons/cart_ic.png" alt="" class="ic">
+                    </a>
+
+                    <a href="notifications.html" class="nav-ic bell">
+                        <img src="./assets/imgs/icons/bell_ic.png" alt="" class="ic">
+                    </a>
+
+                    <div class="nav-ic side-open">
+                        <i class="fa-solid fa-bars ic"></i>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Start Categories Section -->
+    <section class="categ-sec sec-padding">
+        <div class="container">
+
+            <ul class="breadcrumb-con mb-4">
+              <li class="breadcrumb-m"><a href="index.html"> <i class="fa-solid fa-house"></i> الرئيسية</a></li>
+              <li class="breadcrumb-m">/</li>
+              <li class="breadcrumb-m" aria-current="page">من نحن</li>
+            </ul>
+
+            <div class="form-padding bg-white rounded-3">
+                
+                <div class="about-container">
+
+                    <p class="info">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                         حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف ال
+                         تى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زياد
+                         ة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه 
+                         الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.ومن هنا وجب على المصمم أن
+                          يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن
+                          نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.هذا النص يمكن أن يتم تركيبه على أي تص
+                         ميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد 
+                        من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                        التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد
+                        النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا
+                        علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ،
+                        غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+
+                    </p>
+    
+                    <div class="about-logo-con">
+                        <div class="owl-carousel about-carousel">
+    
+                            <img src="./assets/imgs/card_img1.png" alt="" class="about-img">
+                            <img src="./assets/imgs/card_img8.png" alt="" class="about-img">
+                            <img src="./assets/imgs/card_img3.png" alt="" class="about-img">
+                            <img src="./assets/imgs/card_img4.png" alt="" class="about-img">
+    
+                        </div>
+    
+                        <div class="about-logo">
+                            <img src="./assets/imgs/logo_white.png" alt="" class="about-logo-img">
+                        </div>
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Categories Section -->
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row footer-cards gy-4">
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="foot-content">
+                        <a href="index.html">
+                            <img src="assets/imgs/logo.png" alt="" class="foot-logo">
+                        </a>
+
+                        <p class="footer-info">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى
+                            ، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6">
+                    <div class="foot-content">
+                        <h3 class="footer-head">روابط سريعة</h3>
+                        <ul class="footer-links">
+
+                            <li class="foot-link">
+                                <a href="packages.html" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span> الباقات</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="about-us.html" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span>عن ايزي</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span>سياسة الخصوصية</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="#" class="link">
+                                    <img src="assets/imgs/icons/arrow_foot.png" alt="" class="ic">
+                                    <span>انضم الينا</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="foot-content">
+                        <h3 class="footer-head">تواصل معنا</h3>
+
+                        <ul class="footer-links">
+                            <li class="foot-link">
+                                <a href="tel:01028527723" class="link">
+                                    <img src="./assets/imgs/icons/phone_ic.png" alt="" class="ic">
+                                    <span> 01234456678</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <a href="mailto:abdallahzeko8@gmail.com" class="link">
+                                    <img src="./assets/imgs/icons/email_ic.png" alt="" class="ic">
+                                    <span>info@easy.com</span>
+                                </a>
+                            </li>
+                            <li class="foot-link">
+                                <div class="link not-pointer">
+                                    <img src="./assets/imgs/icons/map_ic.png" alt="" class="ic">
+                                    <span>ش مجمع المحاكم - المنصورة</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="foot-social">
+                            <a href="#" class="social-icon">
+                                <img src="assets/imgs/icons/linkedIn_ic.png" alt="" class="social-ic">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="assets/imgs/icons/twitter_ic.png" alt="" class="social-ic">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="assets/imgs/icons/facebook_ic.png" alt="" class="social-ic">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Start CopyRight -->
+    <div class="copy-right">
+        <div class="container">
+            <div class="copy-content">
+                
+                <div class="text">جميع الحقوق محفوظة لموقع ايزي</div>
+                <div class="text">تصميم وبرمجة <a href="https://aait.sa/" target="_blank" class="link">أوامر الشبكة</a></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End CopyRight -->
+
+
+    <div class="overlay-m"></div>
+
+
+
+    <!-- Bootstrap 5 -->
+    <script src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="./assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="./assets/plugins/OwlCarousel2-2.3.4/dist_2/owl.carousel.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+    <!-- FlatPicker -->
+    <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
+
+    <!-- Carousel -->
+    <script>
+        $(document).ready(function(){
+            $(".about-carousel").owlCarousel({
+                items:1,
+                loop: true,
+                rtl:true,
+                nav:false,
+                dots:false,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                animateOut: 'fadeOut'
+            });
+        });
+    </script>
+
+    <!-- Main Js -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

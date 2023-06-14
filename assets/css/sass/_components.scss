@@ -155,6 +155,14 @@
 
 }
 
+.w-sm-100{
+  
+  @media screen and (max-width:$screen-sm) {
+    min-width: 220px !important;
+  }
+
+}
+
 .shadow{
   box-shadow: 0 .1rem 1rem rgba($black2,.1)!important;
 }
@@ -237,6 +245,14 @@
 
 .mt-14{
   margin-top: 14px;
+}
+
+.mb-14{
+  margin-bottom: 14px;
+}
+
+.mb-16{
+  margin-bottom: 16px;
 }
 
 .pl-25{
@@ -548,31 +564,26 @@
 
 
 /********************* breadcrumb *********************/
-.breadcrumb-section{
-  background-color: $white;
-  padding: 14px 0;
+.breadcrumb-con{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  // margin-bottom: 25px;
+  
 
   .breadcrumb-m{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 14px;
-    font-size: 14px;
+    font-size: 13px;
+    color: $main;
 
-    .breadcrumb-m-link{
+    &.active{
       color: $main;
-
-      &.active{
-        color: $black;
-      }
     }
 
     i{
-      color: $black;
-
-      #{$ltr} & {
-        transform: rotateY(-180deg);
-      }
+      font-size: 11px;
     }
   }
 }
@@ -723,8 +734,8 @@
     color: $main;
 
     &::before, &::after {
-      height: 410px;
-      width: 410px;
+      height: 450px;
+      width: 450px;
     }
   }
 
@@ -800,15 +811,15 @@
       min-width: 132px;
     }
 
-    &.yellow-transparent{
-      background-color: transparent;
-      color: $black;
-      border-color: $sec;
+    &.light{
+      background-color: $light5;
+      color: $main;
+      border-color: $light5;
 
-      &:hover{
-        background-color: $sec;
-        color: $white;
-      }
+      // &:hover{
+      //   background-color: $sec;
+      //   color: $white;
+      // }
     }
 
     &.red{
@@ -945,6 +956,7 @@
   border-radius: 6px;
 }
 
+
 /********************* Colors *********************/
 
 .c-black{
@@ -975,6 +987,8 @@
   background-color: $light;
 }
 
+/********************* Classes *********************/
+
 .bb{
   border-bottom: 1px solid rgba($color: $black, $alpha: .1);
 }
@@ -997,6 +1011,43 @@
 
 .not-pointer{
   cursor: auto !important;
+}
+
+.form-style{
+  background-color: $white;
+  border-radius: 20px;
+}
+
+.form-padding{
+  padding: 40px 35px;
+  
+  @media screen and (max-width:$screen-xs) {
+    padding: 30px 20px;
+  }
+}
+
+.form-head{
+  font-size: 15px;
+  color: $main;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: fontDemi;
+}
+
+.form-info{
+  font-size: 15px;
+  color: $black;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-pass{
+  text-align: end;
+  
+  .link{
+    color: $black;
+    font-size: 15px;
+  }
 }
 
 .main-bb{
@@ -1112,7 +1163,7 @@
 }
 
 .main-pt{
-  padding-top: 48px;
+  padding-top: 54px;
 
   @media screen and (max-width:$screen-xs) {
     padding-top: 35px;
@@ -1120,7 +1171,7 @@
 }
 
 .main-pb{
-  padding-bottom: 48px !important;
+  padding-bottom: 54px !important;
   
   @media screen and (max-width:$screen-xs) {
     padding-bottom: 38px;
@@ -1316,15 +1367,15 @@
 }
 
 .main-label{
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 15px;
   // font-family: fontDemi;
-  color: $black2;
+  color: $black;
   display: flex;
   align-items: center;
   gap: 5px;
 
-  .label-hint{
+  .hint{
     color: $dark;
     font-family: fontReg;
     font-size: 14px;
@@ -1345,17 +1396,16 @@
 
   .input-me{
     width: 100%;
-    min-height: 45px;
-    border-radius: 8px;
+    min-height: 48px;
+    border-radius: 12px;
     padding: 0 12px;
     outline: none;
     border: none;
     font-size: 14px;
     color: $dark;
     transition: $main-transition;
-    border: 1px solid $main;
-    // background-color: $white;
-    box-shadow: $main-shadow;
+    border: 1px solid $light3;
+    background-color: $white;
 
     @media screen and (max-width:$screen-xs) {
       min-height: 44px;
@@ -1370,13 +1420,14 @@
     }
 
     &::placeholder{
-      font-size: 14px;
-      color: $black;
+      font-size: 13px;
+      color: $main;
       transition: $main-transition; 
     }
 
     &:focus{
-      border-color: $black;
+      // border-color: $black;
+      background-color: $sec;
 
       &::placeholder{
         opacity: 0;
@@ -1402,8 +1453,8 @@
     top: 50%;
     transform: translateY(-50%);
     @include dir-right(14px);
-    color: $black2;
-    font-size: 13px;
+    color: $main;
+    font-size: 15px;
     cursor: pointer;
     pointer-events: none;
     background-color: transparent;
@@ -1525,16 +1576,16 @@
     
     .select2-selection--single, .select2-selection--multiple {
       cursor: pointer;
-      min-height: 45px;
+      min-height: 48px;
       display: flex;
       align-items: center;
-      border-radius: 8px;
+      border-radius: 12px;
       // padding: 6px 0;
       outline: none;
-      font-size: 14px;
+      font-size: 13px;
       color: $dark;
-      border: 1px solid $main;
-      box-shadow: $main-shadow;
+      border: 1px solid $light3;
+      // box-shadow: $main-shadow;
 
       @media (max-width: $screen-xs) {
         min-height: 44px;
@@ -1542,7 +1593,7 @@
 
       
       .select2-selection__rendered {
-        color: $black;
+        color: $main;
         font-size: 14px;
         display: flex;
         flex-wrap: wrap;
@@ -1562,7 +1613,7 @@
           font-family: "Font Awesome 5 Free";
           display: flex;
           font-size: 13px;
-          color: $dark;
+          color: $main;
           font-weight: 900;
           align-items: center;
           justify-content: center;
@@ -1646,7 +1697,7 @@
   padding: 12px ;
   color: $black;
   font-size: 15px;
-  border-bottom: 1px solid rgba($black2, .3);
+  border-bottom: 1px solid rgba($main, .3);
 
   &:last-child{
     border-bottom: none;
@@ -1686,7 +1737,7 @@
 }
 .select2-results__options::-webkit-scrollbar-thumb {
   border-radius: 25px;
-  background-color: #fcbbbb;
+  background-color: rgba($color: $main, $alpha: .5);
 }
 
 .dropdown-select-2 {
@@ -1933,7 +1984,7 @@
 
 .user-img{
   position: relative;
-  @include circle(90px);
+  @include circle(100px);
   
   @media screen and (max-width:$screen-xs) {
     @include circle(80px); 
@@ -1942,6 +1993,8 @@
   .profile-img{
     @include circle(100%); 
     overflow: hidden;
+    border: 3px solid $white;
+    outline: 1px solid $main;
     
     img{
       width: 100%;
@@ -1952,16 +2005,18 @@
 
   .user-camera{
     position: absolute;
-    bottom: -5px;
-    @include dir-right(9px);
-    @include circle(26px);
+    top: 50%;
+    @include dir-right(-12px);
+    @include circle(30px);
     @include center;
     cursor: pointer;
     background-color: $main;
+    border: 1px solid $white;
+    outline: 1px solid $main;
 
     img{
-      max-width: 15px;
-      max-height: 16px;
+      max-width: 14px;
+      max-height: 15px;
     }
   }
 }
@@ -2556,6 +2611,10 @@
   &.lg{
     min-width: 160px !important;
   }
+
+  &.xl{
+    min-width: 190px !important;
+  }
 }
 
 .dropdown-toggle{
@@ -2571,7 +2630,7 @@
   }
 
   .drop-text{
-    font-size: 15px;
+    font-size: 14px;
     color: $white;
   }
 
@@ -2618,6 +2677,23 @@
     object-fit: cover;
     border-radius: 2px;
   }
+
+  .profile-ic{
+    @include circle(30px);
+    border: 1px solid $light4;
+    @include center;
+    flex-shrink: 0;
+
+    .ic{
+      max-width: 16px;
+      max-height: 16px;
+    }
+
+    &.red{
+      background-color: $red;
+      border-color: $red;
+    }
+  }
   
   .flag-text{
     font-size: 15px;
@@ -2641,64 +2717,67 @@
 }
 
 
-
 // Pagination
+.pagination-con{
+  @include between;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .res-con{
+    font-size: 15px;
+    color: $black;
+  }
+
+  @media screen and (max-width:$screen-xs) {
+    flex-direction: column;
+  }
+
+}
+
 .pagination{
-  box-shadow: $main-shadow;
-  width: fit-content;
-  border-radius: 7px;
-  overflow: hidden;
-  margin: auto;
+  gap: 5px;
+  direction: ltr;
+
+  @media screen and (max-width:$screen-sm) {
+    gap: 2px;
+  }
   
   .page-item{
     
     .page-link{
       border: none;
-      color: $black2;
+      color: $main;
       margin: 0 !important;
-      border-radius: 0 !important;
-      padding: 12px 18px;
-      font-size: 17px;
+      // border-radius: 0 !important;
+      padding: 0;
+      font-size: 14px;
       height: 100%;
-      
-      #{$ltr} & {
-        border-right: 1px solid rgba($main, .7);
-      }
-      #{$rtl} & {
-        border-left: 1px solid rgba($main, .7);
+      @include circle(38px);
+      @include center;
+      border: 1px solid $light4;
+      background-color: $white;
+
+      @media screen and (max-width:$screen-sm) {
+        @include circle(34px);
+        font-size: 13px;
       }
 
-      @media screen and (max-width:$screen-xxs) {
-        padding: 8px 14px;
-      }
-
-      .ic{
-        // padding: 3px 7px;
-        border-radius: 7px;
-        border: 2px solid rgba($main, .7);
-        @include center;
-        width: 22px;
-        height: 22px;
-        font-size: 12px;
+      &.ic{
+        background-color: $light4;
         color: $main;
-        transition: $main-transition;
-        // box-shadow: $main-shadow;
+        font-size: 13px;
+      }
 
-        @media screen and (max-width:$screen-xxs) {
-          width: 20px;
-          height: 20px;
-        }
+      &.dots{
+        background-color: transparent !important;
+        border-color: transparent !important;
+        color: $main !important;
 
-        i{
-          #{$ltr} & {
-            transform: rotate(-180deg);
-          }
-        }
       }
 
       &.active{
-        color: $main;
-        background-color: $white;
+        color: $white;
+        background-color: $main;
       }
 
       &:hover, &:focus{

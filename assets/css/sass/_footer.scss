@@ -2,7 +2,7 @@
     padding: 40px 0;
     background-color: $white;
     position: relative;
-    margin-top: 20px;
+    // margin-top: 20px;
 
     &::before{
         content: '';
@@ -16,7 +16,7 @@
         border-radius: 10px;
 
         @media screen and (max-width:$screen-sm) {
-            width: calc(100% - 40px);
+            width: calc(100% - 100px);
         }
     }
 
@@ -77,6 +77,10 @@
                 .ic{
                     max-width: 17px;
                     max-height: 17px;
+
+                    // #{$ltr} & {
+                    //     transform: rotate(180deg);
+                    // }
 
                     &.app-link{
                         max-width: 220px;
