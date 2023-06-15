@@ -106,3 +106,22 @@ if($(this).find('i').hasClass('fa-regular')){
 // let item = $(this).attr('data-pass')
 // sessionStorage.setItem("activeTab", JSON.stringify(item));
 // })
+
+let allCopy = document.querySelectorAll('.circle')
+
+allCopy.forEach(el => {
+  el.addEventListener('click', function(){
+      let code = el.closest('.copy-item').querySelector('.copy-num');
+      CopyToClipboard(code);
+  });
+})
+
+
+function CopyToClipboard(id) {
+  var r = document.createRange();
+  r.selectNode(id);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+}

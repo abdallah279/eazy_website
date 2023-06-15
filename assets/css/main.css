@@ -143,7 +143,7 @@ i {
 }
 
 p {
-  color: #272424;
+  color: #606E7D;
   margin: 0;
   font-size: 1em;
 }
@@ -636,67 +636,23 @@ html[lang=ar] .dropdown-m-container .dropdown-m {
 }
 
 /********************* Tabs *********************/
-.nav {
+.nav-pills {
+  border: none !important;
+  justify-content: center;
   gap: 12px;
 }
-@media screen and (max-width: 576px) {
-  .nav {
-    gap: 8px;
-  }
-}
-.nav.nav-mb {
-  margin-bottom: 0 !important;
-}
-.nav.border-m {
-  border-bottom: 1px solid #D0D0D0;
-}
-.nav.nav-pills .nav-link {
-  min-width: 160px;
+.nav-pills .nav-link {
+  transition: all 0.3s ease;
+  background-color: #fff;
   color: #272424;
-  border: 1px solid #060042;
   font-size: 14px;
   border-radius: 5px;
-  font-family: fontMed;
-  padding: 12px 15px;
-  transition: all 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  min-height: 44px;
+  min-width: 130px;
 }
-@media screen and (max-width: 576px) {
-  .nav.nav-pills .nav-link {
-    min-width: auto;
-  }
-}
-@media screen and (max-width: 576px) {
-  .nav.nav-pills .nav-link {
-    font-size: 13px;
-    padding: 10px 10px;
-  }
-}
-.nav.nav-pills .nav-link.sm {
-  min-width: 120px;
-}
-.nav.nav-pills .nav-link.active, .nav.nav-pills .nav-link:hover {
-  background-color: #060042;
+.nav-pills .nav-link.active {
+  background-color: #279492;
   color: #fff;
-}
-.nav.nav-pills .nav-link.color-none {
-  min-width: auto;
-  background-color: transparent;
-  font-size: 16px;
-  border-radius: 0;
-  padding: 5px;
-}
-@media screen and (max-width: 425px) {
-  .nav.nav-pills .nav-link.color-none {
-    font-size: 14px;
-  }
-}
-.nav.nav-pills .nav-link.color-none.active, .nav.nav-pills .nav-link.color-none:hover {
-  background-color: transparent;
-  color: #279492;
 }
 
 .tabs {
@@ -936,6 +892,46 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   }
 }
 
+.copy-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 45px;
+  background-color: #EEEEEE;
+  min-height: 34px;
+}
+html[lang=en] .copy-item {
+  padding: 4px 4px 4px 12px;
+}
+html[lang=ar] .copy-item {
+  padding: 4px 12px 4px 4px;
+}
+.copy-item.pd {
+  padding: 4px 12px !important;
+}
+.copy-item .ic1 {
+  width: 14px;
+  height: 14px;
+}
+.copy-item .copy-num {
+  font-size: 11px;
+  color: #606E7D;
+}
+.copy-item .circle {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  cursor: pointer;
+}
+.copy-item .circle .ic2 {
+  max-width: 16px;
+  max-height: 16px;
+}
+
 .price {
   font-size: 15px;
   color: #279492;
@@ -1034,9 +1030,9 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
   }
 }
 .main-btn.light {
-  background-color: #e9f4f4;
+  background-color: #F0F0F4;
   color: #279492;
-  border-color: #e9f4f4;
+  border-color: #F0F0F4;
 }
 .main-btn.red {
   background-color: #EC2F2F;
@@ -1250,6 +1246,11 @@ html[lang=ar] .iti--allow-dropdown .iti__flag-container, html[lang=ar] .iti--sep
 .form-pass .link {
   color: #272424;
   font-size: 15px;
+}
+
+.info {
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .main-bb {
@@ -3632,5 +3633,158 @@ html[lang=ar] .about-container .about-logo-con .about-logo {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.order-item .position-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+@media screen and (max-width: 425px) {
+  .order-item {
+    align-items: start;
+    padding: 12px 10px;
+    gap: 8px;
+  }
+}
+.order-item .order-img {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #D0D0D0;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 425px) {
+  .order-item .order-img {
+    width: 68px;
+    height: 68px;
+  }
+}
+.order-item .order-img .img {
+  max-width: 55px;
+}
+@media screen and (max-width: 425px) {
+  .order-item .order-img .img {
+    max-width: 40px;
+  }
+}
+.order-item .left {
+  width: 100%;
+}
+.order-item .left .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 425px) {
+  .order-item .left .top {
+    margin-bottom: 15px;
+  }
+}
+.order-item .left .top .order-name {
+  font-size: 16px;
+  color: #272424;
+  font-family: fontDemi;
+}
+@media screen and (max-width: 425px) {
+  .order-item .left .top .order-name {
+    font-size: 15px;
+  }
+}
+.order-item .left .top .order-date {
+  font-size: 13px;
+  color: #606E7D;
+}
+.order-item .left .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.order-item .left .bottom .icon {
+  font-size: 15px;
+  color: #606E7D;
+}
+@media screen and (max-width: 576px) {
+  .order-item .left .bottom .icon {
+    display: none;
+  }
+}
+.order-item .copy-item {
+  position: relative;
+  z-index: 10;
+}
+.order-item:hover {
+  box-shadow: 0 0 5px 0 rgba(39, 36, 36, 0.1);
+  transform: translateY(-8px);
+}
+.order-item.full .order-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.order-item.full .left .top {
+  margin-bottom: 8px;
+}
+
+.done-sec .done-img {
+  max-width: 340px;
+  max-height: 340px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 576px) {
+  .done-sec .done-img {
+    max-height: 235px;
+    max-width: 220px;
+  }
+}
+.done-sec .title {
+  font-size: 24px;
+  color: #272424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-family: fontDemi;
+}
+@media screen and (max-width: 576px) {
+  .done-sec .title {
+    font-size: 20px;
+  }
+}
+.done-sec .title .title-ic {
+  max-width: 24px;
+}
+@media screen and (max-width: 576px) {
+  .done-sec .title .title-ic {
+    max-width: 20px;
+  }
+}
+.done-sec .info {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+@media screen and (max-width: 576px) {
+  .done-sec .info {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=main.css.map */
