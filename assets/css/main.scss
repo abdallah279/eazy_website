@@ -390,7 +390,7 @@
         height: 80px;
         @include center;
         border-radius: 8px;
-        border: 1px solid $border-color;
+        border: 1px solid #e6e9ef;
         flex-shrink: 0;
 
         @media screen and (max-width:$screen-xs) {
@@ -421,7 +421,7 @@
             }
 
             .order-name{
-                font-size: 16px;
+                font-size: 17px;
                 color: $black;
                 font-family: fontDemi;
 
@@ -531,11 +531,28 @@
 // slider-img
 .slider-img{
     height: 340px;
-    border-radius: 12px;
+    border-radius: 8px;
     object-fit: cover;
     
     @media screen and (max-width:$screen-xs) {
-        height: 300px;
+        height: 250px;
+    }
+}
+
+// product-slider
+.product-slider{
+    
+    .owl-stage-outer{
+        height: 340px;
+        border-radius: 8px;
+        background-color: $white;
+        padding: 20px 0;
+    }
+
+    .pro-img{
+        max-width: 240px;
+        max-height: 300px;
+        margin: auto;
     }
 }
 
@@ -598,3 +615,193 @@
         }
     }
 }
+
+
+/************* Start payment Section *************/
+.payment-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    // margin-bottom: 25px;
+}
+
+.payment-item .payment-input{
+    display: none;
+}
+
+.payment-item .payment-input:checked + .payment-label{
+    background-color: #fff;
+    border-color: $main;
+}
+
+.payment-item .payment-input:checked + .payment-label .circle{
+    background-color: $main;
+}
+
+.payment-item .payment-input:checked + .payment-label .circle::after{
+    opacity: 1;
+}
+
+.payment-item .payment-input:checked + .payment-label{
+    background-color: #fff;
+    border-color: $main;
+}
+
+.payment-item .payment-label{
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7FF;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 300px;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+
+.payment-item .payment-label .right{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.payment-item .payment-label .right .payment-img{
+    width: 28px;
+    height: 25px;
+}
+
+.payment-item .payment-label .right .name{
+    color: #3B3B3B;
+    font-size: 16px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.payment-item .payment-label .right .text{
+    color: #989898;
+    font-size: 12px;
+}
+
+.payment-item .payment-label .circle{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid $main;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s ease;
+}
+
+.payment-item .payment-label .circle::after{
+    content: '';
+    height: 6px;
+    width: 12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    transform-origin: center center;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+@media screen and (max-width:425px) {
+    .payment-item{
+        width: 100%;
+    }
+
+    .payment-item .payment-label{
+        padding: 18px 14px;
+        width: 100%;
+    }
+
+    .payment-item .payment-label .right .name{
+        font-size: 15px;
+    }
+    
+}
+
+
+// offers-cards
+.offers-cards{
+    .offers-img{
+        border-radius: 8px;
+        // object-fit: cover;
+        height: 240px;
+        width: 100%;
+    }
+}
+
+
+
+// $width: 400px;
+// $height: 200px;
+
+// @mixin half-circle ($direction: right) {
+//   @if $direction == right {
+//     border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+//   }
+//   @elseif $direction == left {
+//     border-radius: 100% 0 0 100% / 50% 0 0 50%;
+//   }
+//   @elseif $direction == top {
+//     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+//   }
+//   @elseif $direction == bottom {
+//     border-radius: 0 0 50% 50% / 0 0 100% 100%;
+//   }
+//   @else {
+//     @error 'Please set correct $direction value.'
+//   }
+// }
+
+// .half-circle {
+//     border: 15px solid lightseagreen;
+//     border-left-width: 0;
+//   display: inline-block;
+//   margin: 10px;
+//   color: white;
+//   text-align: center;
+//   vertical-align: top;
+//   overflow: hidden;
+//   font-size: 15px;
+  
+//   &.horizontal {
+//     width: $width;
+//     height: $height;
+//     line-height: $height;
+    
+//     &.top {
+//       @include half-circle(top);
+//     }
+    
+//     &.bottom {
+//       @include half-circle(bottom);
+//     }
+//   }
+  
+//   &.vertical {
+//     width: $height;
+//     height: $width;
+//     line-height: $width;
+//     text-orientation: upright;
+    
+//     &.right {
+//       @include half-circle();
+//     }
+    
+//     &.left {
+//       @include half-circle(left);
+//     }
+//   }
+// }
+// .rotate {
+//   display: inline-block;
+//   height: 100%;
+//   transform: rotate(90deg);
+// }

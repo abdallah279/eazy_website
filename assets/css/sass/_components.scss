@@ -263,12 +263,47 @@
   @include dir-margin-right(25px !important)
 }
 
+.mx-xs-0{
+  @media screen and (min-width: $screen-xs) {
+    margin-left: unset !important;
+    margin-right: unset !important;
+  }
+}
+
+.owl-nav{
+  .owl-prev, .owl-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $white !important;
+    cursor: pointer;
+    transition: $main-transition;
+    font-size: 24px !important;
+
+    // &:hover{
+    //   color: $main !important;
+    // }
+
+    @media screen and (max-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  .owl-prev{
+    right: 25px;
+  }
+
+  .owl-next{
+    left: 25px;
+  }
+
+}
+
 .owl-dots{
   @include center;
   gap: 7px;
-
+  margin-top: 15px;
   .owl-dot{
-    margin-top: 25px;
     @include circle(10px);
     background-color: rgba($color: #272265, $alpha: .24) !important;
     // opacity: .5;
@@ -616,15 +651,26 @@
   border-bottom: 1px solid #f0f0f0;
   font-size: 16px;
   font-family: fontDemi;
+  @include between;
+
+  .icon{
+    font-size: 18px;
+    color: $main;
+    
+    .img{
+      max-width: 13px;
+    }
+  }
 }
 
 .card-padding{
-  padding: 17px;
+  padding: 20px;
 }
 
-// .section-content{
+.card-px{
+  padding: 12px 20px;
+}
 
-// }
 
 .main-link{
   font-size: 15px;
@@ -635,7 +681,7 @@
 
 .main-item{
   display: flex;
-  align-items: center;
+  // align-items: center;
   gap: 5px;
   margin-bottom: 12px;
   min-height: 23px;
@@ -706,13 +752,25 @@
   }
 }
 
+.price-con{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
 .price{
-  font-size: 15px;
+  font-size: 17px;
   color: $main;
   font-family: fontDemi;
 }
 
-
+.not-price{
+  font-size: 17px;
+  color: $red;
+  font-family: fontDemi;
+  text-decoration: line-through;
+}
 
 /********************* Buttons *********************/
 
@@ -996,8 +1054,8 @@
   color: $black !important;
 }
 
-.c-dark{
-  color: $dark !important;
+.c-white{
+  color: $white !important;
 }
 
 .c-black2{
@@ -1012,6 +1070,10 @@
   color: $red !important;
 }
 
+.bg-main{
+  background-color: $main;
+}
+
 .bg-white{
   background-color: $white;
 }
@@ -1020,8 +1082,24 @@
   background-color: $light;
 }
 
+.bg-smain{
+  background-color: #d8e8ef;
+}
+
+.c-yellow{
+  color: $yellow;
+}
+
 .c-text{
   color: #8D8D8D;
+}
+
+.c-text2{
+  color: #848688;
+}
+
+.c-dark{
+  color: #434343;
 }
 
 /********************* Classes *********************/
@@ -1189,7 +1267,7 @@
 }
 
 .main-border{
-  border: 1px solid $main;
+  border: 1px solid $border-color;
 }
 
 .main-border-b{
@@ -1488,6 +1566,14 @@
         height: 230px;
       }
     }
+
+    &.form{
+
+      background-color: #F9F9F9;
+      border: none;
+      border-radius: 10px;
+  
+    }
   }
 
   .main-icon{
@@ -1505,8 +1591,8 @@
     padding: 0;
     max-width: 18px;
 
-    .ic{
-      max-width: 18px;
+    &.ic{
+      max-width: 12px;
       cursor: pointer;
     }
 
@@ -1550,63 +1636,6 @@
     color: $white;
     @include center;
     border-radius: 6px;
-  }
-
-
-  &.form{
-
-    .input-me{
-      @include dir-padding-left(40px);
-    }
-
-    .main-icon{
-      top: 22px;
-      transform: unset;
-      @include dir-right(unset);
-      @include dir-left(14px);
-      top: 13px;
-      transform: unset;
-      max-width: 20px;
-      max-height: 18px;
-    }
-
-  }
-
-  &.comment{
-    .input-me{
-      min-height: 56px;
-      box-shadow: unset;
-  
-      @media screen and (max-width:$screen-xs) {
-        min-height: 50px;
-      }
-
-      &.sm{
-        min-height: 47px;
-      }
-    }
-
-    .main-icon{
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .sec-icon{
-      width: 100px;
-      border-radius: 0;
-
-      @media screen and (max-width:$screen-xs) {
-        width: 80px;
-      }
-  
-      #{$ltr} & {
-        border-radius: 0 8px 8px 0 !important;
-      }
-
-      #{$rtl} &{
-        border-radius: 8px 0 0 8px !important;
-      }
-    }
   }
 }
 
@@ -2871,4 +2900,97 @@
 
   }
 
+}
+
+
+// flatpickr-calendar
+.flatpickr-calendar{
+  margin: auto;
+  box-shadow: none;
+  border: 1px solid #E7E6E4;
+  border-radius: 12px;
+  width: 420px;
+
+  @media screen and (max-width:$screen-sm) {
+    width: fit-content;
+  }
+
+  @media screen and (max-width:$screen-xxs) {
+    width: 280px;
+  }
+
+  .flatpickr-innerContainer{
+    display: block;
+
+    .flatpickr-rContainer{
+      width: calc(100% - 5px);
+      
+      @media screen and (max-width:$screen-sm) {
+        width: fit-content;
+      }
+      
+      @media screen and (max-width:$screen-xxs) {
+        width: calc(100% - 5px);
+      }
+    }
+  }
+
+  .flatpickr-days{
+    width: 100%;
+  }
+
+  .dayContainer{
+    min-width: 100%;
+    height: 310px;
+  }
+  
+  .flatpickr-day {
+    margin: 2px;
+    @include center;
+    @include circle(48px);
+    max-width: 48px;
+    line-height: initial;
+  }
+
+  .flatpickr-disabled, .flatpickr-disabled:hover{
+    background-color: #f2f2f3;
+    color: #1a1a1b;
+  }
+}
+
+.number-input{
+  @include between;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #F2F2F2;
+  width: 180px;
+  height: 48px;
+  padding: 15px;
+
+  input{
+    color: $black;
+    font-size: 16px;
+    width: 25px;
+    text-align: center;
+
+    @media screen and (max-width:$screen-xs) {
+      font-size: 15px;
+    }
+  }
+
+  .btn-num{
+    font-size: 14px;
+    cursor: pointer;
+    color: $white;
+    @include circle(24px);
+    @include center;
+
+    &.plus{
+      background-color: $main;
+    }
+
+    &.minus{
+      background-color: $red;
+    }
+  }
 }

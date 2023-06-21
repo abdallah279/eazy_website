@@ -93,11 +93,12 @@ minimumResultsForSearch: Infinity,
 // Heart
 $(document).on('click', '.heart' ,function(){
 if($(this).find('i').hasClass('fa-regular')){
-  $(this).find('i').addClass('fa-solid yellow')
+  $(this).find('i').addClass('fa-solid c-yellow')
   $(this).find('i').removeClass('fa-regular')
 } else{
-  $(this).find('i').removeClass('fa-solid yellow')
+  $(this).find('i').removeClass('fa-solid c-yellow')
   $(this).find('i').addClass('fa-regular')
+
 }
 })
 
@@ -109,12 +110,14 @@ if($(this).find('i').hasClass('fa-regular')){
 
 let allCopy = document.querySelectorAll('.circle')
 
-allCopy.forEach(el => {
-  el.addEventListener('click', function(){
-      let code = el.closest('.copy-item').querySelector('.copy-num');
-      CopyToClipboard(code);
-  });
-})
+if(allCopy){
+  allCopy.forEach(el => {
+    el.addEventListener('click', function(){
+        let code = el.closest('.copy-item').querySelector('.copy-num');
+        CopyToClipboard(code);
+    });
+  })
+}
 
 
 function CopyToClipboard(id) {
@@ -125,3 +128,22 @@ function CopyToClipboard(id) {
   document.execCommand('copy');
   window.getSelection().removeAllRanges();
 }
+
+
+// Input Number
+$(document).ready(function() {
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $('.plus').click(function () {
+    var $input = $(this).parent().find('input');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
+});
