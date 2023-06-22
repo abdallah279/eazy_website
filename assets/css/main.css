@@ -682,11 +682,6 @@ html[lang=ar] .dropdown-m-container .dropdown-m {
   min-height: 44px;
   min-width: 130px;
 }
-@media screen and (max-width: 425px) {
-  .nav-pills .nav-link {
-    min-width: 85px;
-  }
-}
 .nav-pills .nav-link.active {
   background-color: #279492;
   color: #fff;
@@ -3101,6 +3096,11 @@ html[lang=ar] .pagination .page-item:last-child .page-link {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 375px) {
+  .page-header .header-content .buttons {
+    gap: 8px 5px;
+  }
+}
 
 .page-navbar {
   padding: 10px 0;
@@ -4187,151 +4187,177 @@ html[lang=ar] .about-container .about-logo-con .about-logo {
   }
 }
 
-.download-now img {
-  width: 170px;
-}
-
-.app-section {
-  padding: 60px 0;
-  background-color: #279492;
-  color: var(--color-white);
-}
-
-/* animation */
-.animated-imgs img {
-  width: 350px;
-  height: 400px;
-  transform: rotate(-25deg);
-  transition: all 1s ease-in-out;
-}
-
-.show-app-left {
-  position: relative;
-  z-index: 1;
-}
-
-.min-h-spe {
-  min-height: 560px;
-}
-
-.animated-imgs img:first-child {
-  position: absolute;
-  top: -100px;
-  right: 170px;
-  animation-name: animate1;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-}
-
-.animated-imgs img:nth-child(2) {
-  position: absolute;
-  top: 0;
-  right: 150px;
-  transform: translateY(150px) rotate(-25deg);
-  animation-name: animate2;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-}
-
-.animated-imgs img:nth-child(3) {
-  position: absolute;
-  top: 100px;
-  right: 400px;
-  transform: translateY(-150px) rotate(-25deg);
-  animation-name: animate3;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-}
-
-.animated-imgs img:nth-child(4) {
-  position: absolute;
-  top: 0;
-  right: 380px;
-  transform: translateY(180px) rotate(-25deg);
-  animation-name: animate4;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-}
-
-/* animation */
-@keyframes animate1 {
-  0% {
-    right: 170px;
-  }
-  50% {
-    right: 110px;
-  }
-  100% {
-    right: 170px;
-  }
-}
-@keyframes animate2 {
-  0% {
-    right: 150px;
-    transform: translateY(150px) rotate(-25deg);
-  }
-  50% {
-    right: 120px;
-    transform: translateY(210px) rotate(-25deg);
-  }
-  100% {
-    right: 150px;
-    transform: translateY(150px) rotate(-25deg);
-  }
-}
-@keyframes animate3 {
-  0% {
-    right: 400px;
-    transform: translateY(-150px) rotate(-25deg);
-  }
-  50% {
-    right: 470px;
-    transform: translateY(-170px) rotate(-25deg);
-  }
-  100% {
-    right: 400px;
-    transform: translateY(-150px) rotate(-25deg);
-  }
-}
-@keyframes animate4 {
-  0% {
-    right: 380px;
-    transform: translateY(180px) rotate(-25deg);
-  }
-  50% {
-    right: 440px;
-    transform: translateY(260px) rotate(-25deg);
-  }
-  100% {
-    right: 380px;
-    transform: translateY(180px) rotate(-25deg);
-  }
-}
-.relative-parent {
-  position: relative;
-}
-
+/************* Start App Section *************/
 .app-section {
   overflow: hidden;
+  background-color: #279492;
 }
-
-.main-p {
-  line-height: 34px;
+.app-section .app-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
-
-.flex-sm-gap {
+@media screen and (max-width: 992px) {
+  .app-section .app-right {
+    align-items: center;
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .app-section .app-right {
+    gap: 20px;
+  }
+}
+.app-section .app-right .app-title {
+  font-size: 26px;
+  font-family: fontDemi;
+  color: #fff;
+}
+@media screen and (max-width: 576px) {
+  .app-section .app-right .app-title {
+    font-size: 22px;
+  }
+}
+.app-section .app-right .app-desc {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.7;
+  font-family: fontReg;
+}
+@media screen and (max-width: 576px) {
+  .app-section .app-right .app-desc {
+    font-size: 15px;
+  }
+}
+.app-section .app-right .app-btns {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
+  flex-wrap: wrap;
 }
-
-.flex-group-me {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.app-section .app-right .app-btns .app-btn {
+  transition: all 0.3s ease;
+}
+.app-section .app-right .app-btns .app-btn img {
+  width: 170px;
+  height: 55px;
+}
+@media screen and (max-width: 576px) {
+  .app-section .app-right .app-btns .app-btn img {
+    width: 140px;
+    height: 48px;
+  }
+}
+.app-section .app-right .app-btns .app-btn:hover {
+  transform: translateY(-5px);
+}
+.app-section .app-left .animated-imgs img {
+  width: 150px;
+  height: 320px;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+}
+html[lang=en] .app-section .app-left .animated-imgs img {
+  transform: rotate(19deg);
+}
+html[lang=ar] .app-section .app-left .animated-imgs img {
+  transform: rotate(-19deg);
+}
+.app-section .app-left .animated-imgs img:first-child {
+  top: -110px;
+}
+html[lang=en] .app-section .app-left .animated-imgs img:first-child {
+  left: 78px;
+}
+html[lang=ar] .app-section .app-left .animated-imgs img:first-child {
+  right: 78px;
+}
+@media screen and (max-width: 1400px) {
+  html[lang=en] .app-section .app-left .animated-imgs img:first-child {
+    left: 30px;
+  }
+  html[lang=ar] .app-section .app-left .animated-imgs img:first-child {
+    right: 30px;
+  }
+}
+.app-section .app-left .animated-imgs img:nth-child(2) {
+  top: 215px;
+}
+html[lang=en] .app-section .app-left .animated-imgs img:nth-child(2) {
+  left: -35px;
+}
+html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(2) {
+  right: -35px;
+}
+@media screen and (max-width: 1400px) {
+  html[lang=en] .app-section .app-left .animated-imgs img:nth-child(2) {
+    left: -83px;
+  }
+  html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(2) {
+    right: -83px;
+  }
+}
+.app-section .app-left .animated-imgs img:nth-child(3) {
+  top: -185px;
+  right: 290px;
+}
+html[lang=en] .app-section .app-left .animated-imgs img:nth-child(3) {
+  left: 290px;
+}
+html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(3) {
+  right: 290px;
+}
+@media screen and (max-width: 1400px) {
+  html[lang=en] .app-section .app-left .animated-imgs img:nth-child(3) {
+    left: 225px;
+  }
+  html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(3) {
+    right: 225px;
+  }
+}
+.app-section .app-left .animated-imgs img:nth-child(4) {
+  top: 135px;
+}
+html[lang=en] .app-section .app-left .animated-imgs img:nth-child(4) {
+  left: 178px;
+}
+html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(4) {
+  right: 178px;
+}
+@media screen and (max-width: 1400px) {
+  html[lang=en] .app-section .app-left .animated-imgs img:nth-child(4) {
+    left: 115px;
+  }
+  html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(4) {
+    right: 115px;
+  }
+}
+.app-section .app-left .animated-imgs img:nth-child(5) {
+  top: -70px;
+}
+html[lang=en] .app-section .app-left .animated-imgs img:nth-child(5) {
+  right: 46px;
+}
+html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(5) {
+  left: 46px;
+}
+@media screen and (max-width: 1400px) {
+  html[lang=en] .app-section .app-left .animated-imgs img:nth-child(5) {
+    right: 44px;
+  }
+  html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(5) {
+    left: 44px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .app-section .app-left .animated-imgs img:nth-child(5) {
+    z-index: 1;
+  }
+  html[lang=en] .app-section .app-left .animated-imgs img:nth-child(5) {
+    right: -44px;
+  }
+  html[lang=ar] .app-section .app-left .animated-imgs img:nth-child(5) {
+    left: -44px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -742,144 +742,138 @@
     }
 }
 
-
-
-
-
-.download-now img {
-    width: 170px;
-  }
-  .app-section {
-    padding: 60px 0;
-    background-color: #279492;
-    color: var(--color-white);
-  }
-  /* animation */
-  .animated-imgs img {
-    width: 350px;
-    height: 400px;
-    transform: rotate(-25deg);
-    transition: all 1s ease-in-out;
-  }
-  .show-app-left {
-    position: relative;
-    z-index: 1;
-  }
-  .min-h-spe {
-    min-height: 560px;
-  }
-  .animated-imgs img:first-child {
-    position: absolute;
-    top: -100px;
-    right: 170px;
-    animation-name: animate1;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-  }
-  .animated-imgs img:nth-child(2) {
-    position: absolute;
-    top: 0;
-    right: 150px;
-    transform: translateY(150px) rotate(-25deg);
-    animation-name: animate2;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-  }
-  .animated-imgs img:nth-child(3) {
-    position: absolute;
-    top: 100px;
-    right: 400px;
-    transform: translateY(-150px) rotate(-25deg);
-    animation-name: animate3;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-  }
-  .animated-imgs img:nth-child(4) {
-    position: absolute;
-    top: 0;
-    right: 380px;
-    transform: translateY(180px) rotate(-25deg);
-    animation-name: animate4;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
-  }
-  
-  /* animation */
-  @keyframes animate1 {
-    0% {
-      right: 170px;
-    }
-    50% {
-      right: 110px;
-    }
-    100% {
-      right: 170px;
-    }
-  }
-  @keyframes animate2 {
-    0% {
-      right: 150px;
-      transform: translateY(150px) rotate(-25deg);
-    }
-    50% {
-      right: 120px;
-      transform: translateY(210px) rotate(-25deg);
-    }
-    100% {
-      right: 150px;
-      transform: translateY(150px) rotate(-25deg);
-    }
-  }
-  @keyframes animate3 {
-    0% {
-      right: 400px;
-      transform: translateY(-150px) rotate(-25deg);
-    }
-    50% {
-      right: 470px;
-      transform: translateY(-170px) rotate(-25deg);
-    }
-    100% {
-      right: 400px;
-      transform: translateY(-150px) rotate(-25deg);
-    }
-  }
-  @keyframes animate4 {
-    0% {
-      right: 380px;
-      transform: translateY(180px) rotate(-25deg);
-    }
-    50% {
-      right: 440px;
-      transform: translateY(260px) rotate(-25deg);
-    }
-    100% {
-      right: 380px;
-      transform: translateY(180px) rotate(-25deg);
-    }
-  }
-  .relative-parent {
-    position: relative;
-  }
-  .app-section {
+/************* Start App Section *************/
+.app-section {
     overflow: hidden;
-  }
+    background-color: $main;
 
-  .main-p {
-    line-height: 34px;
-  }
-  .flex-sm-gap {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .flex-group-me {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
+    .app-right{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media screen and (max-width:$screen-lg) {
+            align-items: center;
+            gap: 25px;
+        }
+
+        @media screen and (max-width:$screen-sm) {
+            gap: 20px;
+        }
+
+        .app-title{
+            font-size: 26px;
+            font-family: fontDemi;
+            color: $white;
+
+            @media screen and (max-width:$screen-sm) {
+                font-size: 22px;
+            }
+        }
+
+        .app-desc{
+            font-size: 16px;
+            color: $white;
+            line-height: 1.7;
+            font-family: fontReg;
+
+            @media screen and (max-width:$screen-sm) {
+                font-size: 15px;
+            }
+        }
+
+        .app-btns{
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            flex-wrap: wrap;
+            
+            .app-btn {
+                transition: $main-transition;
+
+                img {
+                    width: 170px;
+                    height: 55px;
+                    
+                    @media screen and (max-width:$screen-sm) {
+                        width: 140px;
+                        height: 48px;
+                    }
+                }
+
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }
+
+        }
+
+    }
+
+    .app-left{
+        .animated-imgs img {
+            width: 150px;
+            height: 320px;
+            position: absolute;
+            #{$ltr} & {
+                transform: rotate(19deg);
+            }
+            #{$rtl} & {
+                transform: rotate(-19deg);
+            }
+            transition: all 1s ease-in-out;
+            z-index: 2;
+        
+            &:first-child{
+                top: -110px;
+                @include dir-left(78px);
+
+                @media screen and (max-width:1400px) {
+                    @include dir-left(30px);
+                }
+            }
+            
+            &:nth-child(2){
+                top: 215px;
+                @include dir-left(-35px);
+                
+                @media screen and (max-width:1400px) {
+                    @include dir-left(-83px);
+                }
+            }
+            
+            &:nth-child(3){
+                top: -185px;
+                right: 290px;
+                @include dir-left(290px);
+                
+                @media screen and (max-width:1400px) {
+                    @include dir-left(225px);
+                }
+            }
+            
+            &:nth-child(4){
+                top: 135px;
+                @include dir-left(178px);
+                
+                @media screen and (max-width:1400px) {
+                    @include dir-left(115px);
+                }
+            }
+            
+            &:nth-child(5){
+                top: -70px;
+                @include dir-right(46px);
+                
+                @media screen and (max-width:1400px) {
+                    @include dir-right(44px);
+                }
+                
+                @media screen and (max-width:1200px) {
+                    z-index: 1;
+                    @include dir-right(-44px);
+                }
+            }
+        }
+    }
+}

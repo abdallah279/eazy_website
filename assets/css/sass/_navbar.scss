@@ -4,6 +4,12 @@
 
     .header-content{
         @include between;
+
+        .buttons{
+            @media screen and (max-width:$screen-xxs) {
+                gap: 8px 5px;
+            }
+        }
     }
 }
 
