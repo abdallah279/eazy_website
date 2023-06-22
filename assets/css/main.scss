@@ -439,6 +439,7 @@
         .bottom{
             @include between;
             gap: 12px;
+            flex-wrap: wrap;
 
             .icon{
                 font-size: 15px;
@@ -734,74 +735,151 @@
         // object-fit: cover;
         height: 240px;
         width: 100%;
+
+        @media screen and (max-width:$screen-xs) {
+            height: 180px;
+        }
     }
 }
 
 
 
-// $width: 400px;
-// $height: 200px;
 
-// @mixin half-circle ($direction: right) {
-//   @if $direction == right {
-//     border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-//   }
-//   @elseif $direction == left {
-//     border-radius: 100% 0 0 100% / 50% 0 0 50%;
-//   }
-//   @elseif $direction == top {
-//     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-//   }
-//   @elseif $direction == bottom {
-//     border-radius: 0 0 50% 50% / 0 0 100% 100%;
-//   }
-//   @else {
-//     @error 'Please set correct $direction value.'
-//   }
-// }
 
-// .half-circle {
-//     border: 15px solid lightseagreen;
-//     border-left-width: 0;
-//   display: inline-block;
-//   margin: 10px;
-//   color: white;
-//   text-align: center;
-//   vertical-align: top;
-//   overflow: hidden;
-//   font-size: 15px;
+.download-now img {
+    width: 170px;
+  }
+  .app-section {
+    padding: 60px 0;
+    background-color: #279492;
+    color: var(--color-white);
+  }
+  /* animation */
+  .animated-imgs img {
+    width: 350px;
+    height: 400px;
+    transform: rotate(-25deg);
+    transition: all 1s ease-in-out;
+  }
+  .show-app-left {
+    position: relative;
+    z-index: 1;
+  }
+  .min-h-spe {
+    min-height: 560px;
+  }
+  .animated-imgs img:first-child {
+    position: absolute;
+    top: -100px;
+    right: 170px;
+    animation-name: animate1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+  .animated-imgs img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    transform: translateY(150px) rotate(-25deg);
+    animation-name: animate2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+  .animated-imgs img:nth-child(3) {
+    position: absolute;
+    top: 100px;
+    right: 400px;
+    transform: translateY(-150px) rotate(-25deg);
+    animation-name: animate3;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+  .animated-imgs img:nth-child(4) {
+    position: absolute;
+    top: 0;
+    right: 380px;
+    transform: translateY(180px) rotate(-25deg);
+    animation-name: animate4;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
   
-//   &.horizontal {
-//     width: $width;
-//     height: $height;
-//     line-height: $height;
-    
-//     &.top {
-//       @include half-circle(top);
-//     }
-    
-//     &.bottom {
-//       @include half-circle(bottom);
-//     }
-//   }
-  
-//   &.vertical {
-//     width: $height;
-//     height: $width;
-//     line-height: $width;
-//     text-orientation: upright;
-    
-//     &.right {
-//       @include half-circle();
-//     }
-    
-//     &.left {
-//       @include half-circle(left);
-//     }
-//   }
-// }
-// .rotate {
-//   display: inline-block;
-//   height: 100%;
-//   transform: rotate(90deg);
-// }
+  /* animation */
+  @keyframes animate1 {
+    0% {
+      right: 170px;
+    }
+    50% {
+      right: 110px;
+    }
+    100% {
+      right: 170px;
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      right: 150px;
+      transform: translateY(150px) rotate(-25deg);
+    }
+    50% {
+      right: 120px;
+      transform: translateY(210px) rotate(-25deg);
+    }
+    100% {
+      right: 150px;
+      transform: translateY(150px) rotate(-25deg);
+    }
+  }
+  @keyframes animate3 {
+    0% {
+      right: 400px;
+      transform: translateY(-150px) rotate(-25deg);
+    }
+    50% {
+      right: 470px;
+      transform: translateY(-170px) rotate(-25deg);
+    }
+    100% {
+      right: 400px;
+      transform: translateY(-150px) rotate(-25deg);
+    }
+  }
+  @keyframes animate4 {
+    0% {
+      right: 380px;
+      transform: translateY(180px) rotate(-25deg);
+    }
+    50% {
+      right: 440px;
+      transform: translateY(260px) rotate(-25deg);
+    }
+    100% {
+      right: 380px;
+      transform: translateY(180px) rotate(-25deg);
+    }
+  }
+  .relative-parent {
+    position: relative;
+  }
+  .app-section {
+    overflow: hidden;
+  }
+
+  .main-p {
+    line-height: 34px;
+  }
+  .flex-sm-gap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .flex-group-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }

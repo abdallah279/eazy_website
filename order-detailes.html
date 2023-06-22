@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
     <!-- FlatPicker -->
     <link rel="stylesheet" href="./assets/plugins/FlatPicker/flatpickr.css">
+    <!-- Rating -->
+    <link rel="stylesheet" href="./assets/plugins/rateyo/jquery.rateyo.min.css">
     <!-- Style Css -->
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
@@ -216,7 +218,7 @@
 
 
     <!-- Start Slider -->
-    <section class="categ-sec sec-padding">
+    <section class="categ-sec sec-pt">
         <div class="container">
 
             <ul class="breadcrumb-con">
@@ -225,171 +227,101 @@
               </li>
               <li class="breadcrumb-m">/</li>
               <li class="breadcrumb-m" aria-current="page">
-                <a href="categories.html">الأقسام</a>
+                <a href="bookings.html">الحجوزات</a>
               </li>
               <li class="breadcrumb-m">/</li>
-              <li class="breadcrumb-m" aria-current="page">
-                <a href="product-detailes.html">أدوات منزلية</a>
-              </li>
-              <li class="breadcrumb-m">/</li>
-              <li class="breadcrumb-m" aria-current="page">ملخص الطلب</li>
+              <li class="breadcrumb-m" aria-current="page">تفاصيل الحجز</li>
             </ul>
-
+            
         </div>
     </section>
     <!-- End Slider -->
 
 
-    <!-- Start Tabs -->
-    <section class="Tabs-sec sec-pb">
+    <!-- Start order-sec -->
+    <div class="order-sec sec-padding">
         <div class="container">
+          
+            <form action="">
 
-            <form action="done-page.html">
-
-                <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">
-                        المنتجات المطلوبة
-                        <a href="product-detailes.html" class="icon">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                        </a>
-                    </h2>
-                    <div class="section-content card-padding">
-
-                        <div class="check-item main-border rounded-3 p-3 py-2">
-
-                            <div class="order-item p-0">
+                <div class="order-item detailes mb-3">
+        
+                    <img src="./assets/imgs/card_img10.png" alt="" class="order-img" />
     
-                                <div class="order-img">
-                                    <img src="./assets/imgs/product_img1.png" alt="" class="img" />
-                                </div>
-        
-                                <div class="left">
-                                    <div class="top mb-3">
-                                        <h3 class="order-name">عصارة تورنيدو</h3>
-                                    </div>
-        
-                                    <p class="fs-15 c-main ff-d">100 جنيه</p>
-        
-                                </div>
-        
-                            </div>
-
-                            <div class="number-input mx-xs-0 mx-auto">
-                                <span class="plus btn-num">
-                                    <i class="fa-solid fa-plus"></i>
-                                </span>
-                                <input type="text" value="1"/>
-                                <span class="minus btn-num">
-                                    <i class="fa-solid fa-minus"></i>
-                                </span>
-                            </div>
+                    <div class="left">
+                        <div class="top mb-2">
+                            <h3 class="order-name">قاعة كونكورد</h3>
+                        </div>
     
-                        </div>                     
-
-                        <div class="check-item main-border rounded-3 p-3 py-2">
-
-                            <div class="order-item p-0">
+                        <div class="main-item mb-2">
+                            <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                            <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                        </div>
     
-                                <div class="order-img">
-                                    <img src="./assets/imgs/product_img1.png" alt="" class="img" />
-                                </div>
-        
-                                <div class="left">
-                                    <div class="top mb-3">
-                                        <h3 class="order-name">عصارة تورنيدو</h3>
-                                    </div>
-        
-                                    <p class="fs-15 c-main ff-d">100 جنيه</p>
-        
-                                </div>
-        
-                            </div>
-
-                            <div class="number-input mx-xs-0 mx-auto">
-                                <span class="plus btn-num">
-                                    <i class="fa-solid fa-plus"></i>
-                                </span>
-                                <input type="text" value="1"/>
-                                <span class="minus btn-num">
-                                    <i class="fa-solid fa-minus"></i>
-                                </span>
-                            </div>
+                        <div class="buttons">
     
-                        </div>                     
-
+                            <a href="chat.html" class="call-btn">
+                                <i class="fa-solid fa-comments ic"></i>
+                                <span class="text">محادثة</span>
+                            </a>
+    
+                            <a href="tel:01028527723" target="_blank" class="call-btn">
+                                <i class="fa-solid fa-phone-flip ic"></i>
+                                <span class="text">مكالمة</span>
+                            </a>
+    
+                        </div>
+                        
                     </div>
+    
                 </div>
-
-                <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">ملاحظات</h2>
-                    <div class="section-content card-padding">
-
-                        <div class="main-input">
-                            <textarea name="" id="" class="input-me text-area sm form"></textarea>
+                
+                <div class="order-item detailes mb-3">
+        
+                    <img src="./assets/imgs/card_img10.png" alt="" class="order-img" />
+    
+                    <div class="left">
+                        <div class="top mb-2">
+                            <h3 class="order-name">محمد علي</h3>
                         </div>
-
+    
+                        <div class="main-item mb-2">
+                            <img src="./assets/imgs/icons/map_ic2.png" class="item-img" alt="">
+                            <div class="item-text">شارع مجمع المحاكم - المنصورة </div>
+                        </div>
+    
+                        <div class="buttons">
+    
+                            <a href="chat.html" class="call-btn">
+                                <i class="fa-solid fa-comments ic"></i>
+                                <span class="text">محادثة</span>
+                            </a>
+    
+                            <a href="tel:01028527723" target="_blank" class="call-btn">
+                                <i class="fa-solid fa-phone-flip ic"></i>
+                                <span class="text">مكالمة</span>
+                            </a>
+    
+                        </div>
+                        
                     </div>
+    
                 </div>
-
-                <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">عنوان التوصيل</h2>
-                    <div class="section-content card-padding">
-
-                        <div class="row">
-                            <div class="col-md-6">
-
-                                <div class="main-input">
-                                    <input type="text" placeholder="الرجاء تحديد العنوان" class="input-me form" id="inputMap" data-bs-toggle="modal" data-bs-target="#mapModal">
-                                    <img src="./assets/imgs/icons/map_inp.svg" alt="" class="main-icon ic">
-                                </div>
-
-                                <input type="hidden" id="lat">
-                                <input type="hidden" id="lng">
-
-
-                            </div>
-                        </div>
-
+    
+                <div class="check-item card-px bg-smain rounded-3 mb-3">
+                    <div class="fs-16 c-main ff-d">
+                        السعر الاجمالي
                     </div>
+    
+                    <div class="fs-15 c-main ff-d">10000 جنيه</div>
                 </div>
-
-                <div class="services-card bg-white rounded-3 mb-4">
-                    <h2 class="card-title card-padding">تكلفة الطلب</h2>
-                    <div class="section-content card-padding">
-        
-                        <div class="check-item">
-                            <div class="fs-16 c-dark">
-                                قيمة المنتجات
-                            </div>
-        
-                            <div class="fs-15 c-text">1000 جنيه</div>
-                        </div>
-        
-                        <div class="check-item">
-                            <div class="fs-16 c-dark">
-                                القيمة المضافة
-                            </div>
-        
-                            <div class="fs-15 c-text">1000 جنيه</div>
-                        </div>
-        
-                        <div class="check-item">
-                            <div class="fs-16 c-main ff-d">
-                                المبلغ الاجمالي
-                            </div>
-        
-                            <div class="fs-15 c-main ff-d">1000 جنيه</div>
-                        </div>
-        
-                    </div>
-                </div>
-
+    
                 <div class="services-card bg-white rounded-3 mb-3">
                     <h2 class="card-title card-padding">وسيلة الدفع</h2>
                     <div class="section-content card-padding">
         
                         <div class="payment-items">
-
+    
                             <div class="payment-item">
     
                                 <input type="radio" name="payment" id="payment1" class="payment-input">
@@ -402,13 +334,13 @@
                                             <div class="text">الدفع بالبطاقة الائتمانية</div>
                                         </div>
                                     </div>
-
+    
                                     <div class="circle"></div>
-
+    
                                 </label>
     
                             </div>
-
+    
                             <div class="payment-item">
     
                                 <input type="radio" name="payment" id="payment2" class="payment-input">
@@ -421,27 +353,33 @@
                                             <div class="text">دفع المبلغ للمندوب</div>
                                         </div>
                                     </div>
-
+    
                                     <div class="circle"></div>
-
+    
                                 </label>
     
                             </div>
-
+    
                         </div>
         
                     </div>
                 </div>
-
+    
+                <div class="services-card bg-white rounded-3 py-5 px-4 mb-4">
+                    <div class="fs-16 ff-d c-black text-center">في انتظار رد مقدم الخدمة</div>
+                    <!-- <div class="fs-16 ff-d c-black text-center">في انتظارالدفع</div> -->
+                </div>
+    
                 <div class="buttons justify-content-center">
-                    <button type="submit" class="main-btn up md">تأكيد الحجز</button>
+                    <button type="submit" class="main-btn up md">دفع</button>
+                    <button type="button" data-bs-target="#ratingModal" data-bs-toggle="modal" class="main-btn up md">تقييم الطلب</button>
                 </div>
 
             </form>
 
         </div>
-    </section>
-    <!-- End Tabs -->
+    </div>
+    <!-- End order-sec -->
 
 
     <!-- Start Footer -->
@@ -560,17 +498,61 @@
     <div class="overlay-m"></div>
 
 
+     <!-- rating Modal -->
+     <div class="modal fade" id="ratingModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered lg">
+          <div class="modal-content">
 
-    <div class="modal fade modal-map" id="mapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <form action="" class="w-100">
+
+                <div class="modal-header">
+                  <img src="./assets/imgs/logo.png" alt="" class="modal-img">
+                </div>
+    
                 <div class="modal-body">
-                    <div id="map" style="width:100%;height:400px;"></div>
+                  <!-- <h3 class="modal-title">تقييم الطلب</h3> -->
+
+                  <div class="rating-star mx-auto"></div>
+                  <input type="hidden" class="rate-value">
+    
+                  <div class="main-input mt-4">
+                    <textarea name="" id="" class="input-me text-area" placeholder="اترك تعليقا"></textarea>
+                  </div>
+    
                 </div>
+    
                 <div class="modal-footer">
-                    <button type="button" class="main-btn up confirm-btn" data-bs-dismiss="modal">تأكيد</button>
+                    
+                  <button type="button" data-bs-target="#ratingDoneModal" data-bs-toggle="modal" class="main-btn up login-btn lg">تأكيد</button>
+    
                 </div>
+
+            </form>
+
+          </div>
+        </div>
+    </div>
+
+    <!-- ratingDone Modal -->
+    <div class="modal fade" id="ratingDoneModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <img src="../assets/imgs/logo.png" alt="" class="modal-img">
             </div>
+
+            <div class="modal-body">
+                <h3 class="modal-title mb-2">شكرا لك تم استلام تقييمك بنجاح</h3>
+    
+                <img src="./assets/imgs/icons/icons8-done.gif" alt="" class="modal-img-body mx-auto">
+            </div>
+
+            <div class="modal-footer mt-2">
+                <button type="button" data-bs-dismiss="modal" class="main-btn login-btn up lg">تأكيد</a>
+            </div>
+
+          </div>
         </div>
     </div>
 
@@ -589,61 +571,38 @@
     <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
     <!-- FlatPicker -->
     <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
-    <!-- Map -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&libraries=places&language=ar" ></script>
+    <!-- Rating -->
+    <script src="./assets/plugins/rateyo/jquery.rateyo.min.js"></script>
 
-    <!-- Initialize And Add The Map -->
+    <!-- Rating -->
     <script>
-        let lat = document.getElementById('lat');
-        let lng = document.getElementById('lng');
-        function initMap() {
-            var location = { lat: 24.746189966314272, lng: 46.87979429238138 };
-
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
-                center: location,
-            });
-
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                draggable: true,
-                title: "اسحب العلامة"
-            });
-
-            let infowindow = [];
-            google.maps.event.addListener(marker, 'dragend', function (evt) {
-
-                const geocoder = new google.maps.Geocoder();
-
-                function geoLatLng(){
-                    geocoder.geocode({location: evt.latLng}).then((res) =>{
-                        let theCountry = res.results[0].formatted_address;
-
-                        let newInfoWindow = new google.maps.InfoWindow({
-                            content: `${theCountry}`
-                        });
-
-                        infowindow.push(newInfoWindow);
-                        for(let i =0; i< infowindow.length; i++){
-                            infowindow[i].close();
-                            infowindow[infowindow.length - 1].open(map, marker);
-                        }
-
-                        let confirmBtn = document.querySelector('.confirm-btn');
-                        confirmBtn.addEventListener('click', ()=>{
-                            document.getElementById('inputMap').value = `${theCountry}`;
-                            lat.value = marker.getPosition().lat();
-                            lng.value = marker.getPosition().lng();
-                        });
-                    });
+        $(function () {
+            let isRtlRate = $('html[lang="ar"]').length > 0;
+        
+            $(".rating-star").rateYo({
+                halfStar: true,
+                spacing   : "5px",
+                starWidth: "34px",
+                normalFill: "#E3E3E3",
+                ratedFill: "#279492",
+                starSvg: `<svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                viewBox="0 0 47.94 47.94" xml:space="preserve">
+                                <path d="M26.285,2.486l5.407,10.956c0.376,0.762,1.103,1.29,1.944,1.412l12.091,1.757
+                                c2.118,0.308,2.963,2.91,1.431,4.403l-8.749,8.528c-0.608,0.593-0.886,1.448-0.742,2.285l2.065,12.042
+                                c0.362,2.109-1.852,3.717-3.746,2.722l-10.814-5.685c-0.752-0.395-1.651-0.395-2.403,0l-10.814,5.685
+                                c-1.894,0.996-4.108-0.613-3.746-2.722l2.065-12.042c0.144-0.837-0.134-1.692-0.742-2.285l-8.749-8.528
+                                c-1.532-1.494-0.687-4.096,1.431-4.403l12.091-1.757c0.841-0.122,1.568-0.65,1.944-1.412l5.407-10.956
+                                C22.602,0.567,25.338,0.567,26.285,2.486z"/>
+                            </svg>`,
+                rtl: isRtlRate ? true : false,
+                onSet: function (rating, rateYoInstance) {
+                    console.log(rating)
+                    let rateInput = $(this).next('.rate-value');
+                    rateInput.attr('value', rating);
                 }
-
-                geoLatLng();
             });
-        }
 
-        initMap();
+        });
 
     </script>
 

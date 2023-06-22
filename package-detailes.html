@@ -219,21 +219,23 @@
     <section class="categ-sec sec-padding">
         <div class="container">
 
-            <ul class="breadcrumb-con">
-              <li class="breadcrumb-m">
-                <a href="index.html"> <i class="fa-solid fa-house"></i> الرئيسية</a>
-              </li>
-              <li class="breadcrumb-m">/</li>
-              <li class="breadcrumb-m" aria-current="page">
-                <a href="categories.html">الأقسام</a>
-              </li>
-              <li class="breadcrumb-m">/</li>
-              <li class="breadcrumb-m" aria-current="page">
-                <a href="product-detailes.html">أدوات منزلية</a>
-              </li>
-              <li class="breadcrumb-m">/</li>
-              <li class="breadcrumb-m" aria-current="page">ملخص الطلب</li>
+            <ul class="breadcrumb-con mb-4">
+                <li class="breadcrumb-m">
+                  <a href="index.html"> <i class="fa-solid fa-house"></i> الرئيسية</a>
+                </li>
+                <li class="breadcrumb-m">/</li>
+                <li class="breadcrumb-m" aria-current="page">
+                  <a href="packages.html">الباقات</a>
+                </li>
+                <li class="breadcrumb-m">/</li>
+                <li class="breadcrumb-m" aria-current="page">تفاصيل الباقة</li>
             </ul>
+
+            <div class="owl-carousel img-carousel">
+                <img src="./assets/imgs/houseware-store1.jpg" alt="" class="slider-img">
+                <img src="./assets/imgs/houseware-store2.jpeg" alt="" class="slider-img">
+                <img src="./assets/imgs/card_img4.jpg" alt="" class="slider-img">
+            </div>
 
         </div>
     </section>
@@ -242,124 +244,19 @@
 
     <!-- Start Tabs -->
     <section class="Tabs-sec sec-pb">
+
         <div class="container">
 
-            <form action="done-page.html">
+            
+            <form action="package-detailes-order.html">
 
                 <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">
-                        المنتجات المطلوبة
-                        <a href="product-detailes.html" class="icon">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                        </a>
-                    </h2>
-                    <div class="section-content card-padding">
-
-                        <div class="check-item main-border rounded-3 p-3 py-2">
-
-                            <div class="order-item p-0">
-    
-                                <div class="order-img">
-                                    <img src="./assets/imgs/product_img1.png" alt="" class="img" />
-                                </div>
-        
-                                <div class="left">
-                                    <div class="top mb-3">
-                                        <h3 class="order-name">عصارة تورنيدو</h3>
-                                    </div>
-        
-                                    <p class="fs-15 c-main ff-d">100 جنيه</p>
-        
-                                </div>
-        
-                            </div>
-
-                            <div class="number-input mx-xs-0 mx-auto">
-                                <span class="plus btn-num">
-                                    <i class="fa-solid fa-plus"></i>
-                                </span>
-                                <input type="text" value="1"/>
-                                <span class="minus btn-num">
-                                    <i class="fa-solid fa-minus"></i>
-                                </span>
-                            </div>
-    
-                        </div>                     
-
-                        <div class="check-item main-border rounded-3 p-3 py-2">
-
-                            <div class="order-item p-0">
-    
-                                <div class="order-img">
-                                    <img src="./assets/imgs/product_img1.png" alt="" class="img" />
-                                </div>
-        
-                                <div class="left">
-                                    <div class="top mb-3">
-                                        <h3 class="order-name">عصارة تورنيدو</h3>
-                                    </div>
-        
-                                    <p class="fs-15 c-main ff-d">100 جنيه</p>
-        
-                                </div>
-        
-                            </div>
-
-                            <div class="number-input mx-xs-0 mx-auto">
-                                <span class="plus btn-num">
-                                    <i class="fa-solid fa-plus"></i>
-                                </span>
-                                <input type="text" value="1"/>
-                                <span class="minus btn-num">
-                                    <i class="fa-solid fa-minus"></i>
-                                </span>
-                            </div>
-    
-                        </div>                     
-
-                    </div>
-                </div>
-
-                <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">ملاحظات</h2>
-                    <div class="section-content card-padding">
-
-                        <div class="main-input">
-                            <textarea name="" id="" class="input-me text-area sm form"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">عنوان التوصيل</h2>
-                    <div class="section-content card-padding">
-
-                        <div class="row">
-                            <div class="col-md-6">
-
-                                <div class="main-input">
-                                    <input type="text" placeholder="الرجاء تحديد العنوان" class="input-me form" id="inputMap" data-bs-toggle="modal" data-bs-target="#mapModal">
-                                    <img src="./assets/imgs/icons/map_inp.svg" alt="" class="main-icon ic">
-                                </div>
-
-                                <input type="hidden" id="lat">
-                                <input type="hidden" id="lng">
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="services-card bg-white rounded-3 mb-4">
-                    <h2 class="card-title card-padding">تكلفة الطلب</h2>
+                    <h2 class="card-title card-padding">تفاصيل الباقة</h2>
                     <div class="section-content card-padding">
         
                         <div class="check-item">
                             <div class="fs-16 c-dark">
-                                قيمة المنتجات
+                                اسم الباقة
                             </div>
         
                             <div class="fs-15 c-text">1000 جنيه</div>
@@ -367,76 +264,79 @@
         
                         <div class="check-item">
                             <div class="fs-16 c-dark">
-                                القيمة المضافة
+                                السعر
                             </div>
         
                             <div class="fs-15 c-text">1000 جنيه</div>
-                        </div>
-        
-                        <div class="check-item">
-                            <div class="fs-16 c-main ff-d">
-                                المبلغ الاجمالي
-                            </div>
-        
-                            <div class="fs-15 c-main ff-d">1000 جنيه</div>
                         </div>
         
                     </div>
                 </div>
 
                 <div class="services-card bg-white rounded-3 mb-3">
-                    <h2 class="card-title card-padding">وسيلة الدفع</h2>
+                    <h2 class="card-title card-padding">الخدمات المقدمة</h2>
                     <div class="section-content card-padding">
-        
-                        <div class="payment-items">
-
-                            <div class="payment-item">
     
-                                <input type="radio" name="payment" id="payment1" class="payment-input">
-                                <label for="payment1" class="payment-label">
+                        <div class="check-item main-border rounded-3 p-3">
+                            <div class="check-box">
+                                <input type="checkbox" name="" id="serv1">
+                                <label class="check" for="serv1"></label>
+                                <label for="serv1" class="order-item full p-0 cu-pointer">
         
-                                    <div class="right">
-                                        <img src="./assets/imgs/icons/credit.png" alt="" class="payment-img">
-                                        <div class="content">
-                                            <div class="name">بطاقة إئتمانية</div>
-                                            <div class="text">الدفع بالبطاقة الائتمانية</div>
+                                    <img src="./assets/imgs/card_img2.png" alt="" class="order-img" />
+                                    
+            
+                                    <div class="left">
+                                        <div class="top mb-3">
+                                            <h3 class="order-name">قاعة لوريف</h3>
                                         </div>
+            
+                                        <p class="fs-15 c-main ff-d">100 جنيه</p>
+            
                                     </div>
-
-                                    <div class="circle"></div>
-
+            
                                 </label>
-    
                             </div>
-
-                            <div class="payment-item">
     
-                                <input type="radio" name="payment" id="payment2" class="payment-input">
-                                <label for="payment2" class="payment-label">
-        
-                                    <div class="right">
-                                        <img src="./assets/imgs/icons/credit.png" alt="" class="payment-img">
-                                        <div class="content">
-                                            <div class="name">كاش</div>
-                                            <div class="text">دفع المبلغ للمندوب</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="circle"></div>
-
-                                </label>
-    
-                            </div>
-
                         </div>
+    
+                        <div class="check-item main-border rounded-3 p-3">
+                            <div class="check-box">
+                                <input type="checkbox" name="" id="serv2">
+                                <label class="check" for="serv2"></label>
+                                <label for="serv2" class="order-item p-0 cu-pointer">
         
+                                    <img src="./assets/imgs/profile_img.jpg" alt="" class="order-img" />
+            
+                                    <div class="left">
+                                        <div class="top mb-3">
+                                            <h3 class="order-name">محمد علي <span class="name-text">(مصفف شعر)</span> </h3>
+                                        </div>
+            
+                                        <p class="fs-15 c-main ff-d">100 جنيه</p>
+            
+                                    </div>
+            
+                                </label>
+                            </div>
+    
+                        </div>
+    
                     </div>
                 </div>
 
+                <div class="check-item card-px bg-smain rounded-3 mb-3">
+                    <div class="fs-16 c-main ff-d">
+                        السعر الاجمالي
+                    </div>
+
+                    <div class="fs-15 c-main ff-d">10000 جنيه</div>
+                </div>
+        
                 <div class="buttons justify-content-center">
-                    <button type="submit" class="main-btn up md">تأكيد الحجز</button>
+                    <button type="submit" class="main-btn up md">تأكيد الطلب</button>
                 </div>
-
+        
             </form>
 
         </div>
@@ -561,21 +461,6 @@
 
 
 
-    <div class="modal fade modal-map" id="mapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id="map" style="width:100%;height:400px;"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="main-btn up confirm-btn" data-bs-dismiss="modal">تأكيد</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
 
     <!-- Bootstrap 5 -->
     <script src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
@@ -589,63 +474,27 @@
     <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
     <!-- FlatPicker -->
     <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
-    <!-- Map -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn3NtsJ5lgHSIxUJ4AuqAMm2RXldDDjN8&libraries=places&language=ar" ></script>
 
-    <!-- Initialize And Add The Map -->
+    <!-- categories Slider -->
     <script>
-        let lat = document.getElementById('lat');
-        let lng = document.getElementById('lng');
-        function initMap() {
-            var location = { lat: 24.746189966314272, lng: 46.87979429238138 };
-
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
-                center: location,
+        $(document).ready(function(){
+            let isRtl2 = $('html[lang="ar"]').length > 0;
+            $(".img-carousel").owlCarousel({
+                items:1,
+                loop: true,
+                rtl:true,
+                nav:true,
+                dots:true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                animateOut: 'fadeOut',
+                navText : ["<i class='fa fa-chevron-right'></i>","<i class='fa fa-chevron-left'></i>"],
             });
-
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                draggable: true,
-                title: "اسحب العلامة"
-            });
-
-            let infowindow = [];
-            google.maps.event.addListener(marker, 'dragend', function (evt) {
-
-                const geocoder = new google.maps.Geocoder();
-
-                function geoLatLng(){
-                    geocoder.geocode({location: evt.latLng}).then((res) =>{
-                        let theCountry = res.results[0].formatted_address;
-
-                        let newInfoWindow = new google.maps.InfoWindow({
-                            content: `${theCountry}`
-                        });
-
-                        infowindow.push(newInfoWindow);
-                        for(let i =0; i< infowindow.length; i++){
-                            infowindow[i].close();
-                            infowindow[infowindow.length - 1].open(map, marker);
-                        }
-
-                        let confirmBtn = document.querySelector('.confirm-btn');
-                        confirmBtn.addEventListener('click', ()=>{
-                            document.getElementById('inputMap').value = `${theCountry}`;
-                            lat.value = marker.getPosition().lat();
-                            lng.value = marker.getPosition().lng();
-                        });
-                    });
-                }
-
-                geoLatLng();
-            });
-        }
-
-        initMap();
-
+        });
     </script>
+
+    
 
     <!-- Main Js -->
     <script src="./assets/js/main.js"></script>
