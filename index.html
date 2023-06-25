@@ -222,7 +222,11 @@
 
     <!-- Start Home Section -->
     <section class="home-sec">
-        <img src="./assets/imgs/home_bg.png" alt="" class="home-img">
+        <div class="owl-carousel home-slider">
+            <img src="./assets/imgs/home_bg.png" alt="" class="home-img">
+            <img src="./assets/imgs/home_bg.png" alt="" class="home-img">
+            <img src="./assets/imgs/home_bg.png" alt="" class="home-img">
+        </div>
     </section>
     <!-- End Home Section -->
 
@@ -788,8 +792,8 @@
           </div>
 
         </div>
-      </section>
-      <!-- End App Section -->
+    </section>
+    <!-- End App Section -->
 
 
 
@@ -922,6 +926,25 @@
     <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
     <!-- FlatPicker -->
     <script src="./assets/plugins/FlatPicker/flatpickr.js"></script>
+
+    <!-- categories Slider -->
+    <script>
+        $(document).ready(function(){
+            let isRtl2 = $('html[lang="ar"]').length > 0;
+            $(".home-slider").owlCarousel({
+                items:1,
+                loop: true,
+                rtl: isRtl2 ? "rtl" : "ltr",
+                dots: false,
+                nav: false,
+                autoplay: true,
+                margin: 10,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
+                smartSpeed: 1500,
+            });
+        });
+    </script>
 
     <!-- categories Slider -->
     <script>

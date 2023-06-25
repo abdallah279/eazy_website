@@ -225,6 +225,18 @@
               <li class="breadcrumb-m" aria-current="page">الأقسام</li>
             </ul>
 
+            <div class="search-container mb-4">
+                <form action="" class="main-input">
+                    <input type="text" placeholder="كلمات مفتاحية" class="input-me">
+                    <button type="submit" class="main-icon p-0 bg-transparent search-ic">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <button type="button" class="filter-btn" data-bs-toggle="modal" data-bs-target="#filterModal">
+                    <img src="./assets/imgs/icons/filter.svg" alt="" class="ic">
+                </button>
+            </div>
+
             <div class="cards-container grid-4">
                 
                 <a href="hall-detailes.html" class="main-card">
@@ -598,6 +610,76 @@
 
 
     <div class="overlay-m"></div>
+
+
+    <!-- filterModal -->
+    <div class="modal fade" id="filterModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered lg">
+          <div class="modal-content">
+
+            <form action="" class="w-100">
+
+                <div class="modal-header">
+                  <img src="./assets/imgs/logo.png" alt="" class="modal-img">
+                </div>
+    
+                <div class="modal-body">
+        
+                    <div class="input-g">
+                        <div class="main-label">المدينة</div>
+                        <select name="" id="" class="select">
+                            <option value="" selected disabled>اختر المدينة</option>
+                            <option value="">القاهرة</option>
+                            <option value="">القاهرة</option>
+                            <option value="">القاهرة</option>
+                            <option value="">القاهرة</option>
+                        </select>
+                    </div>
+
+                    <div class="input-g">
+                        <div class="main-label">ترتيب النتائج</div>
+
+
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-6">
+                                <label for="sort1" class="radio-box cu-pointer mb-2">
+                                    <input type="radio" class="input-radio" name="sort" id="sort1">
+                                    <span class="fs-15 c-black">الأعلى سعرا</span>
+                                </label>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <label for="sort2" class="radio-box cu-pointer mb-2">
+                                    <input type="radio" class="input-radio" name="sort" id="sort2">
+                                    <span class="fs-15 c-black">الأقل سعرا</span>
+                                </label>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <label for="sort3" class="radio-box cu-pointer mb-2">
+                                    <input type="radio" class="input-radio" name="sort" id="sort3">
+                                    <span class="fs-15 c-black">الأعلى تقييما</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+    
+                </div>
+    
+                <div class="modal-footer">
+                    
+                    <button type="submit" class="main-btn up login-btn">تأكيد</button>
+    
+                </div>
+
+            </form>
+
+          </div>
+        </div>
+    </div>
 
 
 

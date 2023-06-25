@@ -1242,6 +1242,37 @@ html[lang=ar] .copy-item {
   color: #272424;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search-container .main-input {
+  flex-grow: 1;
+}
+.search-container .main-input .input-me {
+  border: none;
+  border-radius: 9px;
+  min-height: 48px !important;
+}
+.search-container .main-input .input-me:focus {
+  background-color: #fff;
+}
+
+.filter-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.filter-btn .ic {
+  max-width: 22px;
+  max-height: 17px;
+}
+
 /********************* Colors *********************/
 .c-black {
   color: #272424 !important;
@@ -1702,7 +1733,7 @@ html[lang=ar] .main-imgs .main-img:not(:last-child) {
 }
 
 .main-label {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 15px;
   color: #272424;
   display: flex;
@@ -1793,7 +1824,7 @@ html[lang=ar] .main-imgs .main-img:not(:last-child) {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #279492;
+  color: #3BAEAA;
   font-size: 15px;
   cursor: pointer;
   pointer-events: none;
@@ -3476,24 +3507,21 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   color: #fff;
 }
 
-.home-sec {
-  height: 555px;
+.home-sec .home-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 520px;
 }
 @media screen and (max-width: 992px) {
-  .home-sec {
+  .home-sec .home-img {
     height: 400px;
   }
 }
 @media screen and (max-width: 576px) {
-  .home-sec {
+  .home-sec .home-img {
     height: 200px;
   }
-}
-.home-sec .home-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .categories-item {
@@ -3658,6 +3686,8 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.05);
+  display: block;
+  width: 100%;
 }
 .cards-container .product-card .img {
   height: 180px;
@@ -3681,9 +3711,11 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  height: 45px;
 }
 .cards-container .product-card .content .price {
   font-size: 17px;
+  height: 22px;
 }
 .cards-container .product-card:hover .img .product-img {
   transform: scale(1.1);
@@ -3909,7 +3941,11 @@ html[lang=ar] .about-container .about-logo-con .about-logo {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  flex-wrap: wrap;
+}
+@media screen and (max-width: 992px) {
+  .order-item .left .bottom {
+    flex-wrap: wrap;
+  }
 }
 .order-item .left .bottom .icon {
   font-size: 15px;
